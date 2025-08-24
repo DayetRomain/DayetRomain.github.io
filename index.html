@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - BTS SIO SISR</title>
+    <!-- Police Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Liens CSS -->
+    <link rel="stylesheet" href="timelineandicône.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>Romain Dayet</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#situation">Situation Professionnelle</a></li>
+            <li><a href="#tableau-competences">Tableau de Compétences</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Menu burger pour mobile -->
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section">
+        <div class="container">
+            <div class="accueil-content">
+                <div class="accueil-text">
+                    <h1>Je suis <span class="words-wrapper">
+                        <span class="word">Curieux</span>
+                        <span class="word">Ambitieux</span>
+                        <span class="word">Passionné</span>
+                    </span></h1>
+                    <p class="subtitle">Étudiant en BTS SIO - Option SISR</p>
+                    <div class="social-links-accueil">
+                        <a href="https://linkedin.com" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://flipboard.com" target="_blank" class="social-btn">
+                            <i class="fab fa-flipboard"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="accueil-illustration">
+                    <img src="assets/workspace-illustration.svg" alt="Illustration espace de travail" class="workspace-img">
+                    <div class="floating-elements">
+                        <div class="floating-icon window"><i class="fas fa-window-maximize"></i></div>
+                        <div class="floating-icon chart"><i class="fas fa-chart-line"></i></div>
+                        <div class="floating-icon mail"><i class="fas fa-envelope"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Profil -->
+    <section id="profil" class="section">
+        <div class="container">
+            <h2>Mon Profil</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>Je m'appelle Romain Dayet, étudiant en deuxième année de BTS Services Informatiques aux Organisations, option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Institut Limayrac à Toulouse. Passionné par la technologie et les systèmes d'information, j'ai choisi cette voie afin de développer des compétences solides en administration réseau, cybersécurité et infrastructure informatique.</p>
+                    
+                    <a href="assets/CV_2025-05-23_Romain_Dayet_page-0001.jpg" target="_blank" class="cv-button">
+                        <i class="fas fa-file-alt"></i>
+                        Mon CV
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    
+                    <div class="timelines-container">
+                        <div class="timeline-section">
+                            <h3>Mon Parcours</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <div class="date">2021-2023</div>
+                                        <button class="timeline-btn">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <span>BAC Technologique - STMG</span>
+                                            <small>Sciences et Technologies du Management et de la Gestion</small>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <div class="date">2024-2025</div>
+                                        <button class="timeline-btn">
+                                            <i class="fas fa-server"></i>
+                                            <span>BTS SIO Option SISR</span>
+                                            <small>Institut Limayrac à Toulouse</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-section">
+                            <h3>Centre d'intérêt</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <button class="timeline-btn interest-btn">
+                                            <i class="fas fa-dumbbell"></i>
+                                            <span>Sport</span>
+                                            <small>Le sport est pour moi une source d'équilibre et de bien-être. Il me permet de me maintenir en forme tout en développant discipline et persévérance.</small>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <button class="timeline-btn interest-btn">
+                                            <i class="fas fa-music"></i>
+                                            <span>Musique</span>
+                                            <small>La musique m'accompagne au quotidien, source d'inspiration et de détente. Elle rythme mes journées et stimule ma créativité.</small>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <button class="timeline-btn interest-btn">
+                                            <i class="fas fa-gamepad"></i>
+                                            <span>Jeux Vidéos</span>
+                                            <small>Les jeux vidéo sont pour moi un moyen de développer ma réflexion stratégique tout en me divertissant. Ils me permettent également de rester connecté avec mes amis.</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-image">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Tableau de Compétences -->
+    <section id="tableau-competences" class="section">
+        <div class="container">
+            <h2>Tableau de Compétences</h2>
+            <div class="tableau-container">
+                <h3 class="tableau-title">BTS SERVICES INFORMATIQUES AUX ORGANISATIONS - SESSION 2025</h3>
+                <div class="info-etudiant">
+                    <div class="info-gauche">
+                        <p><strong>NOM et prénom : </strong>DAYET Romain</p>
+                        <p><strong>Centre de formation : </strong>Institut Limayrac</p>
+                    </div>
+                    <div class="info-droite">
+                        <p><strong>Adresse URL du portfolio : </strong>https://romaindayet.github.io/Portfolio-BTS-SIO-SISR/</p>
+                        <p><strong>Option : </strong>SISR</p>
+                    </div>
+                </div>
+                
+                <table class="tableau-synthese">
+                    <thead>
+                        <tr>
+                            <th class="col-situation">COMPÉTENCES MISES EN ŒUVRE / RÉALISATIONS PROFESSIONNELLES</th>
+                            <th>PÉRIODE</th>
+                            <th>GÉRER LE PATRIMOINE INFORMATIQUE
+                                <ul class="competence-details">
+                                    <li>Recenser et identifier les ressources numériques</li>
+                                    <li>Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                                    <li>Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
+                                    <li>Vérifier les conditions de la continuité d'un service informatique</li>
+                                    <li>Gérer des sauvegardes</li>
+                                    <li>Vérifier le respect des règles d'utilisation des ressources numériques</li>
+                                </ul>
+                            </th>
+                            <th>RÉPONDRE AUX INCIDENTS ET AUX DEMANDES D'ASSISTANCE ET D'ÉVOLUTION
+                                <ul class="competence-details">
+                                    <li>Collecter, suivre et orienter des demandes</li>
+                                    <li>Traiter des demandes concernant les services réseau et système, applicatifs</li>
+                                    <li>Traiter des demandes concernant les applications</li>
+                                </ul>
+                            </th>
+                            <th>DÉVELOPPER LA PRÉSENCE EN LIGNE DE L'ORGANISATION
+                                <ul class="competence-details">
+                                    <li>Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</li>
+                                    <li>Référencer les services en ligne de l'organisation et mesurer leur visibilité.</li>
+                                    <li>Participer à l'évolution d'un site Web exploitant les données de l'organisation.</li>
+                                </ul>
+                            </th>
+                            <th>TRAVAILLER EN MODE PROJET
+                                <ul class="competence-details">
+                                    <li>Analyser les objectifs et les modalités d'organisation d'un projet</li>
+                                    <li>Planifier les activités</li>
+                                    <li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+                                </ul>
+                            </th>
+                            <th>METTRE À DISPOSITION DES UTILISATEURS UN SERVICE INFORMATIQUE
+                                <ul class="competence-details">
+                                    <li>Réaliser les tests d'intégration et d'acceptation d'un service</li>
+                                    <li>Déployer un service</li>
+                                    <li>Accompagner les utilisateurs dans la mise en place d'un service</li>
+                                </ul>
+                            </th>
+                            <th>ORGANISER SON DÉVELOPPEMENT PROFESSIONNEL
+                                <ul class="competence-details">
+                                    <li>Mettre en place son environnement d'apprentissage personnel</li>
+                                    <li>Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                                    <li>Gérer son identité professionnelle</li>
+                                    <li>Développer son projet professionnel</li>
+                                </ul>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Section Réalisation en cours de formation -->
+                        <tr class="section-header">
+                            <td colspan="8">RÉALISATION EN COURS DE FORMATION</td>
+                        </tr>
+                        <tr>
+                            <td>Mise à jour d'un parc informatique</td>
+                            <td class="periode">✓</td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-parc">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="mode-projet-parc">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="dev-professionnel-parc">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Veille technologique</td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="dev-professionnel-veille">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Création d'un site web M2L (HTML et CSS)</td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="presence-en-ligne-m2l">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Windows Server (Active Directory, DHCP, PowerShell,...)</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-windows">✓</td>
+                            <td class="competence clickable" data-popup="incidents-windows">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-windows">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Configuration des équipements réseaux</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-reseau">✓</td>
+                            <td class="competence clickable" data-popup="incidents-reseau">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-reseau">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Réalisation professionnelle SISR2 (Active Directory, DHCP, Radius Pages WEB Network)</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-sisr2">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="mode-projet-sisr2">✓</td>
+                            <td class="competence clickable" data-popup="service-sisr2">✓</td>
+                            <td class="competence clickable" data-popup="dev-professionnel-sisr2">✓</td>
+                        </tr>
+
+                        <!-- Section Réalisations en milieu professionnel première année -->
+                        <tr class="section-header">
+                            <td colspan="8">RÉALISATIONS EN MILIEU PROFESSIONNEL EN COURS DE PREMIÈRE ANNÉE</td>
+                        </tr>
+                        <tr>
+                            <td>Mise en place d'une gestion d'un Virtualisation (ESXI)</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-esxi">✓</td>
+                            <td class="competence clickable" data-popup="incidents-esxi">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="mode-projet-esxi">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="dev-professionnel-esxi">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Automatisation de tâches d'administration</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-auto">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Mise en place d'une gestion des stocks</td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="mode-projet-stocks">✓</td>
+                            <td class="competence clickable" data-popup="service-stocks">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Réalisation de mode opératoire</td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-mode-op">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Planification de tâches</td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-planification">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+
+                        <!-- Section Réalisations en milieu professionnel deuxième année -->
+                        <tr class="section-header">
+                            <td colspan="8">RÉALISATIONS EN MILIEU PROFESSIONNEL EN COURS DE SECONDE ANNÉE</td>
+                        </tr>
+                        <tr>
+                            <td>Refonte d'un SI</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-si">✓</td>
+                            <td class="competence clickable" data-popup="incidents-si">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-si">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Supervision de l'infrastructure réseau et serveur</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-supervision">✓</td>
+                            <td class="competence clickable" data-popup="incidents-supervision">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-supervision">✓</td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td>Utilisation de l'outil de gestion pour les interventions</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-outil">✓</td>
+                            <td class="competence clickable" data-popup="incidents-outil">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="dev-professionnel-outil">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Déploiement Switch Edge</td>
+                            <td class="periode"></td>
+                            <td class="competence clickable" data-popup="gerer-patrimoine-switch">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-popup="service-switch">✓</td>
+                            <td class="competence clickable" data-popup="dev-professionnel-switch">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tableau-scroll-container">
+                    <div class="scroll-track">
+                        <div class="scroll-thumb"></div>
+                    </div>
+                    <div class="scroll-arrows">
+                        <button class="scroll-arrow" id="scroll-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-arrow" id="scroll-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="competence-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 id="popup-title"></h3>
+                <button class="popup-close" id="popup-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div id="popup-description"></div>
+                <div class="popup-details">
+                    <h4>Détails de la réalisation :</h4>
+                    <ul id="popup-tasks"></ul>
+                </div>
+                <div class="popup-competences">
+                    <h4>Compétences développées :</h4>
+                    <div id="popup-skills"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

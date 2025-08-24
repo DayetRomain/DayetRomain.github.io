@@ -1,0 +1,267 @@
+/* Fond avec effet particules
+   Crée une grille de fond avec un effet de matrice */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;                /* Place le fond derrière tout le contenu */
+  background-color: #0a0f18;
+  /* Crée une grille avec des lignes très fines en vert transparent */
+  background-image: 
+    linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animation de soulignement des liens de navigation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;                    /* Commence invisible */
+  height: 2px;
+  background-color: #00ff9d;
+  transition: width 0.3s ease; /* Animation fluide de l'apparition */
+}
+
+.nav-links a:hover::after {
+  width: 100%;                /* S'étend sur toute la largeur au survol */
+}
+
+/* Animation des icônes technologiques */
+.tech-icons i {
+  color: #5b718b;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tech-icons i:hover {
+  color: #00ff9d;             /* Change de couleur au survol */
+  transform: translateY(-5px); /* S'élève légèrement */
+}
+
+/* Animation des barres de progression */
+.progress {
+  position: relative;
+  background: linear-gradient(90deg, #00ff9d, #00b36e);
+  animation: slideRight 1.5s ease-out forwards; /* Animation de remplissage */
+}
+
+@keyframes slideRight {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+
+/* Animation du menu burger pour mobile */
+.burger div {
+  transition: all 0.3s ease;
+}
+
+/* Transformations du menu burger en X */
+.burger.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Animation du logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo i {
+  color: #00ff9d;
+  animation: blink 3s infinite; /* Effet de clignotement */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Animation d'apparition des sections */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet de survol sur les catégories de compétences */
+.skill-category {
+  background: rgba(17, 34, 64, 0.6);
+  border: 1px solid rgba(0, 255, 157, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: rgba(0, 255, 157, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.1);
+}
+
+/* Animation des champs de formulaire */
+.form-group input,
+.form-group textarea {
+  background: rgba(17, 34, 64, 0.6);
+  border: 1px solid rgba(0, 255, 157, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00ff9d;
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);
+}
+
+/* Effet glitch sur le texte */
+.glitch-text {
+  position: relative;
+  animation: glitch 3s infinite;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+@keyframes glitch {
+  0% { transform: skewX(0deg); }
+  5% { transform: skewX(2deg); text-shadow: 2px 2px var(--primary-color); }
+  10% { transform: skewX(-2deg); text-shadow: -2px -2px var(--primary-color); }
+  15% { transform: skewX(0deg); text-shadow: 0 0 10px var(--primary-color); }
+  100% { transform: skewX(0deg); }
+}
+
+/* Animation de frappe de texte */
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid var(--primary-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end),
+             blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color) }
+}
+
+/* Animation du titre principal */
+.main-title {
+  position: relative;
+  color: #e6f1ff;
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.8);
+  }
+}
+
+/* Effet Matrix en arrière-plan */
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0a0f18;
+    overflow: hidden;
+}
+
+.matrix-column {
+    position: absolute;
+    width: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #0f0;
+    opacity: 0;
+    animation: matrixRain 3s infinite;
+}
+
+@keyframes matrixRain {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
+
+/* Animation de scan des sections de compétences */
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0f0);
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Animation des barres de progression */
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--target-width);
+    background: linear-gradient(90deg, #0f0, #00ff00);
+    animation: loadProgress 1.5s ease-out forwards;
+    box-shadow: 0 0 10px #0f0;
+}
+
+@keyframes loadProgress {
+    from { width: 0; }
+    to { width: var(--target-width); }
+}
+
+/* Effets de survol sur les boutons et éléments interactifs */
+button {
+    background: transparent;
+    border: 1px solid #0f0;
+    color: #0f0;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}

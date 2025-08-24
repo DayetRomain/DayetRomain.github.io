@@ -1,0 +1,93 @@
+/* Définition des variables globales pour une cohérence des couleurs dans tout le site
+   Ces variables permettent de modifier facilement le thème du site en changeant uniquement ces valeurs */
+:root {
+  --primary-color: #00ff9d;    /* Couleur principale utilisée pour les accents et mises en évidence */
+  --background-dark: #0b0f1a;  /* Couleur de fond principale du site */
+  --text-primary: #e6f1ff;     /* Couleur principale du texte */
+  --text-secondary: #5b718b;   /* Couleur secondaire pour les textes moins importants */
+}
+
+/* Reset CSS - Supprime les marges et paddings par défaut des navigateurs
+   Assure une cohérence d'affichage entre les différents navigateurs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;        /* Inclut padding et bordure dans la largeur totale */
+  scroll-behavior: smooth;       /* Ajoute un défilement fluide pour les ancres */
+}
+
+/* Styles de base pour le corps de la page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Police système moderne */
+  background-color: var(--background-dark);                       /* Fond sombre */
+  color: var(--text-primary);                                    /* Texte clair */
+}
+
+/* Barre de navigation fixe en haut de la page */
+.navbar {
+  position: fixed;                           /* Reste fixe pendant le défilement */
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 25, 47, 0.9);  /* Fond semi-transparent */
+  padding: 1rem 2rem;
+  display: flex;                            /* Layout flexible */
+  justify-content: space-between;           /* Espace les éléments */
+  align-items: center;                      /* Centre verticalement */
+  z-index: 1000;                           /* Assure que la navbar reste au-dessus des autres éléments */
+  backdrop-filter: blur(10px);              /* Effet de flou sur le fond */
+  border-bottom: 1px solid var(--primary-color); /* Bordure d'accent */
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+  display: flex;                /* Affichage horizontal des liens */
+  gap: 2rem;                   /* Espace entre les liens */
+  list-style: none;            /* Supprime les puces de liste */
+}
+
+/* Style des liens de navigation */
+.nav-links a {
+  color: var(--text-primary);  /* Couleur du texte */
+  text-decoration: none;       /* Supprime le soulignement */
+  position: relative;          /* Pour les effets de survol */
+}
+
+/* Sections principales du site */
+.section {
+  min-height: 100vh;           /* Hauteur minimum d'une vue complète */
+  padding: 120px 2rem 2rem;    /* Espace pour la navbar fixe */
+}
+
+/* Conteneur principal limitant la largeur du contenu */
+.container {
+  max-width: 1200px;          /* Largeur maximale du contenu */
+  margin: auto;               /* Centrage horizontal */
+}
+
+/* Grille des compétences */
+.skills-grid {
+  display: grid;              /* Layout en grille */
+  gap: 2rem;                 /* Espace entre les éléments */
+}
+
+/* Catégories de compétences */
+.skill-category {
+  background-color: #112240;  /* Fond légèrement plus clair que le fond principal */
+  padding: 2rem;
+  border-radius: 10px;       /* Coins arrondis */
+}
+
+/* Barre de progression des compétences */
+.progress-bar {
+  background-color: #233554;  /* Fond de la barre */
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;          /* Cache le débordement de la progression */
+}
+
+/* Indicateur de progression */
+.progress {
+  background-color: var(--primary-color);  /* Couleur de la progression */
+  height: 100%;
+  width: 0;                               /* La largeur sera modifiée par JavaScript */
+}
