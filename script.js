@@ -1,4 +1,5 @@
-// Configuration simplifiée des particules
+// Configuration simplifiée des particules (commentée car particlesJS non chargé)
+/*
 particlesJS("particles-js", {
     particles: {
         number: {
@@ -50,6 +51,464 @@ particlesJS("particles-js", {
         }
     }
 });
+*/
+
+// Données des missions détaillées (définies au début)
+const missionData = {
+    'datasec': {
+        title: 'Mission DataSec',
+        subtitle: 'Mission DataSec',
+        context: 'Dans le cadre de ma formation en administration système et réseaux, nous avons été amenés à mettre en place une solution de sauvegarde automatisée pour les structures hébergées à la M2L. L\'objectif était de permettre à chaque utilisateur de sauvegarder ses données sur un serveur FTP de façon sécurisée, avec une restauration possible en cas de besoin.',
+        objectives: [
+            'Acquérir des compétences techniques en gestion de sauvegardes.',
+            'Savoir configurer et sécuriser un service FTP.',
+            'Préparer des scénarios professionnels proches de la réalité.'
+        ],
+        steps: [
+            {
+                title: 'Gestion des utilisateurs et habilitations',
+                images: [
+                    {
+                        src: 'DATASEC.img/Gestion des utilisateurs et habilitations/créationuser.png',
+                        alt: 'Création d\'un utilisateur',
+                        caption: 'Interface de création d\'un nouvel utilisateur'
+                    },
+                    {
+                        src: 'DATASEC.img/Gestion des utilisateurs et habilitations/connexionuser.png',
+                        alt: 'Connexion utilisateur',
+                        caption: 'Interface de connexion utilisateur'
+                    }
+                ]
+            },
+            {
+                title: 'Mise en place des sauvegardes',
+                images: [
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/configuration du profil.png',
+                        alt: 'Configuration du profil',
+                        caption: 'Configuration des paramètres de profil pour les sauvegardes'
+                    },
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/Différents types de sauvegarde.png',
+                        alt: 'Types de sauvegarde',
+                        caption: 'Aperçu des différents types de sauvegarde disponibles'
+                    },
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/test des paramètres FTP réussi.png',
+                        alt: 'Test FTP réussi',
+                        caption: 'Validation des paramètres de connexion FTP'
+                    },
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/planification sauvegarde.png',
+                        alt: 'Planification des sauvegardes',
+                        caption: 'Interface de planification automatique des sauvegardes'
+                    },
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/sauvegarde réussi.png',
+                        alt: 'Sauvegarde réussie',
+                        caption: 'Confirmation de la réussite de la sauvegarde'
+                    },
+                    {
+                        src: 'DATASEC.img/Mise en place des sauvegardes/restauration fichier côté client.png',
+                        alt: 'Restauration côté client',
+                        caption: 'Interface de restauration des fichiers côté client'
+                    }
+                ]
+            },
+            {
+                title: 'Vérification de la continuité du service',
+                images: [
+                    {
+                        src: 'DATASEC.img/Vérification de la continuité du service/test de connexion user vers Server FTP.png',
+                        alt: 'Test de connexion FTP',
+                        caption: 'Test de connexion utilisateur vers le serveur FTP'
+                    },
+                    {
+                        src: 'DATASEC.img/Vérification de la continuité du service/restauration réussi.png',
+                        alt: 'Restauration réussie',
+                        caption: 'Confirmation de la réussite de la restauration'
+                    },
+                    {
+                        src: 'DATASEC.img/Vérification de la continuité du service/fichiers restaurés.png',
+                        alt: 'Fichiers restaurés',
+                        caption: 'Affichage des fichiers après restauration réussie'
+                    }
+                ]
+            },
+            {
+                title: 'Configuration réseau',
+                images: [
+                    {
+                        src: 'DATASEC.img/Configuration réseau/configuration IPV4 manuelle.png',
+                        alt: 'Configuration IPv4 manuelle',
+                        caption: 'Configuration manuelle des paramètres IPv4 du réseau'
+                    }
+                ]
+            },
+            {
+                title: 'Déploiement du service',
+                images: [
+                    {
+                        src: 'DATASEC.img/Déploiement du service/interface connexion server FTP.png',
+                        alt: 'Interface de connexion serveur FTP',
+                        caption: 'Interface de connexion au serveur FTP'
+                    },
+                    {
+                        src: 'DATASEC.img/Déploiement du service/connexion réussi au server FTP.png',
+                        alt: 'Connexion réussie au serveur FTP',
+                        caption: 'Confirmation de la connexion réussie au serveur FTP'
+                    },
+                    {
+                        src: 'DATASEC.img/Déploiement du service/configuration mdp et port server FTP.png',
+                        alt: 'Configuration mot de passe et port FTP',
+                        caption: 'Configuration des paramètres de mot de passe et port du serveur FTP'
+                    }
+                ]
+            },
+            {
+                title: 'Accompagnement des utilisateurs',
+                images: [
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/connexion avec identifiants.png',
+                        alt: 'Connexion avec identifiants',
+                        caption: 'Guide de connexion utilisateur avec identifiants'
+                    },
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/configuration du profil.png',
+                        alt: 'Configuration du profil utilisateur',
+                        caption: 'Aide à la configuration du profil utilisateur'
+                    },
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/test des paramètres FTP réussi.png',
+                        alt: 'Test des paramètres FTP',
+                        caption: 'Validation des paramètres FTP avec l\'utilisateur'
+                    },
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/planification sauvegarde.png',
+                        alt: 'Planification des sauvegardes',
+                        caption: 'Formation à la planification automatique des sauvegardes'
+                    },
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/restauration.png',
+                        alt: 'Processus de restauration',
+                        caption: 'Guide du processus de restauration pour les utilisateurs'
+                    },
+                    {
+                        src: 'DATASEC.img/Accompagnement des utilisateurs/restauration fichier côté client.png',
+                        alt: 'Restauration côté client',
+                        caption: 'Accompagnement pour la restauration de fichiers côté client'
+                    }
+                ]
+            }
+        ]
+    },
+    velanne: {
+        title: 'MISSION VELANNE',
+        subtitle: 'Mission Velanne (VLAN)',
+        context: 'Mise en place d\'une segmentation réseau avec VLANs pour isoler les ligues sportives et sécuriser le réseau.',
+        objectives: [
+            'Séparer logiquement les réseaux des ligues',
+            'Améliorer la sécurité et la gestion des accès',
+            'Mise en place de VLANs pour gérer les switchs'
+        ],
+        steps: [
+            {
+                title: 'Exploitation des normes VLAN (IEEE 802.1Q)',
+                images: [
+                    {
+                        src: 'VELANNE.img/Exploitation des normes VLAN (IEEE 802.1Q)/Création de VLAN.png',
+                        alt: 'Création de VLAN',
+                        caption: 'Interface de création de VLAN selon les normes IEEE 802.1Q'
+                    }
+                ]
+            },
+            {
+                title: 'Mise en place du VLAN 99 (administration)',
+                images: [
+                    {
+                        src: 'VELANNE.img/Mise en place du VLAN 99 (administration)/Création et config VLAN administration.png',
+                        alt: 'Configuration VLAN administration',
+                        caption: 'Création et configuration du VLAN 99 pour l\'administration des switchs'
+                    }
+                ]
+            },
+            {
+                title: 'Vérification de la continuité du service (tests de ping intra/inter-VLAN)',
+                images: [
+                    {
+                        src: 'VELANNE.img/Vérification de la continuité du service (tests de ping intrainter-VLAN)/plan de test.png',
+                        alt: 'Plan de test VLAN',
+                        caption: 'Plan de test pour vérifier la continuité du service et les communications intra/inter-VLAN'
+                    }
+                ]
+            },
+            {
+                title: 'Réponse à la demande d\'isoler les réseaux',
+                images: [
+                    {
+                        src: 'VELANNE.img/Réponse à la demande d\'isoler les réseaux/Création VLANs utilisateurs.png',
+                        alt: 'Création VLANs utilisateurs',
+                        caption: 'Création des VLANs utilisateurs pour isoler les réseaux des différentes ligues'
+                    }
+                ]
+            },
+            {
+                title: 'Déploiement du service avec configuration trunk',
+                images: [
+                    {
+                        src: 'VELANNE.img/Déploiement du service avec configuration trunk/trunk entre les switchs.png',
+                        alt: 'Configuration trunk entre les switchs',
+                        caption: 'Configuration trunk entre les switchs pour le déploiement du service VLAN'
+                    }
+                ]
+            }
+        ]
+    },
+    kiwi: {
+        title: 'MISSION KIWI',
+        subtitle: 'Mission Kiwi',
+        context: 'La mission Kiwi consistait à déployer une infrastructure serveur complète basée sur Ubuntu Server, incluant la configuration d\'un serveur DHCP, la mise en place d\'un point d\'accès Wi-Fi et la configuration de routeurs pour assurer une connectivité optimale.',
+        objectives: [
+            'Installer et configurer Ubuntu Server',
+            'Mettre en place un serveur DHCP fonctionnel',
+            'Configurer un point d\'accès Wi-Fi sécurisé',
+            'Optimiser la configuration des routeurs'
+        ],
+        steps: [
+            {
+                title: 'Installation Ubuntu Server',
+                images: []
+            },
+            'Configuration du serveur DHCP',
+            'Mise en place du point d\'accès Wi-Fi',
+            'Configuration des routeurs',
+            'Tests de connectivité',
+            'Optimisation des performances'
+        ]
+    }
+};
+
+// Fonction pour ouvrir la page de détail de mission (définition globale immédiate)
+function openMissionDetail(missionKey) {
+    console.log('openMissionDetail appelée avec:', missionKey);
+    
+    const mission = missionData[missionKey];
+    if (!mission) {
+        console.warn('Mission non trouvée:', missionKey);
+        return;
+    }
+
+    console.log('Mission trouvée:', mission);
+
+    // Masquer toutes les sections normales
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+        section.style.display = 'none';
+    });
+
+    // Afficher la section de détail
+    const detailSection = document.getElementById('mission-detail');
+    if (detailSection) {
+        detailSection.style.display = 'block';
+        detailSection.classList.add('active');
+        console.log('Section de détail affichée');
+    } else {
+        console.error('Section mission-detail non trouvée');
+        return;
+    }
+
+    // Remplir le contenu
+    const titleElement = document.getElementById('mission-detail-title');
+    const subtitleElement = document.getElementById('mission-detail-subtitle');
+    const contextElement = document.getElementById('mission-context');
+    
+    if (titleElement) titleElement.textContent = mission.title;
+    if (subtitleElement) subtitleElement.textContent = mission.subtitle;
+    if (contextElement) contextElement.textContent = mission.context;
+
+    // Remplir les objectifs
+    const objectivesList = document.getElementById('mission-objectives');
+    if (objectivesList) {
+        objectivesList.innerHTML = '';
+        mission.objectives.forEach(objective => {
+            const li = document.createElement('li');
+            li.textContent = objective;
+            objectivesList.appendChild(li);
+        });
+    }
+
+    // Remplir les étapes
+    const stepsContainer = document.getElementById('mission-steps');
+    if (stepsContainer) {
+        stepsContainer.innerHTML = '';
+        mission.steps.forEach((step, stepIndex) => {
+            const stepDiv = document.createElement('div');
+            stepDiv.className = 'mission-step';
+            
+            if (typeof step === 'object') {
+                // Étape avec images (accordéon)
+                stepDiv.innerHTML = `
+                    <div class="step-header" data-step="${stepIndex}">
+                        <span class="step-title">${step.title}</span>
+                        <i class="fas fa-chevron-down step-toggle"></i>
+                    </div>
+                    ${step.description ? `<p class="step-description">${step.description}</p>` : ''}
+                    <div class="step-content" id="step-content-${stepIndex}" style="display: none;">
+                        <div class="step-images">
+                            ${step.images.map((img, index) => `
+                                <div class="step-image-container">
+                                    <img src="${img.src}" alt="${img.alt}" class="step-image clickable-image" data-index="${index}">
+                                    <p class="image-caption">${img.caption}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                // Ajouter l'événement de clic pour l'accordéon
+                const stepHeader = stepDiv.querySelector('.step-header');
+                const stepContent = stepDiv.querySelector('.step-content');
+                const stepToggle = stepDiv.querySelector('.step-toggle');
+                
+                stepHeader.addEventListener('click', () => {
+                    const isVisible = stepContent.style.display !== 'none';
+                    if (isVisible) {
+                        stepContent.style.display = 'none';
+                        stepToggle.style.transform = 'rotate(0deg)';
+                    } else {
+                        stepContent.style.display = 'block';
+                        stepToggle.style.transform = 'rotate(180deg)';
+                    }
+                });
+                
+                // Ajouter les événements de clic pour les images après insertion dans le DOM
+                setTimeout(() => {
+                    const images = stepDiv.querySelectorAll('.clickable-image');
+                    images.forEach((img, index) => {
+                        img.addEventListener('click', () => {
+                            openImageModal(step.images[index]);
+                        });
+                    });
+                }, 0);
+            } else {
+                // Étape simple (texte) - maintenant aussi avec accordéon
+                stepDiv.innerHTML = `
+                    <div class="step-header" data-step="${stepIndex}">
+                        <span class="step-title">${step}</span>
+                        <i class="fas fa-chevron-down step-toggle"></i>
+                    </div>
+                    <div class="step-content" id="step-content-${stepIndex}" style="display: none;">
+                        <p class="step-text">Détails de cette étape à compléter...</p>
+                    </div>
+                `;
+                
+                // Ajouter l'événement de clic pour l'accordéon des étapes simples
+                const stepHeader = stepDiv.querySelector('.step-header');
+                const stepContent = stepDiv.querySelector('.step-content');
+                const stepToggle = stepDiv.querySelector('.step-toggle');
+                
+                stepHeader.addEventListener('click', () => {
+                    const isVisible = stepContent.style.display !== 'none';
+                    if (isVisible) {
+                        stepContent.style.display = 'none';
+                        stepToggle.style.transform = 'rotate(0deg)';
+                    } else {
+                        stepContent.style.display = 'block';
+                        stepToggle.style.transform = 'rotate(180deg)';
+                    }
+                });
+            }
+            
+            stepsContainer.appendChild(stepDiv);
+        });
+    }
+
+    // Scroll vers le haut
+    window.scrollTo(0, 0);
+    console.log('Page de détail mise à jour et affichée');
+}
+
+// Fonction pour fermer la page de détail de mission
+function closeMissionDetail() {
+    console.log('closeMissionDetail appelée');
+    
+    // Masquer la section de détail
+    const detailSection = document.getElementById('mission-detail');
+    if (detailSection) {
+        detailSection.style.display = 'none';
+        detailSection.classList.remove('active');
+    }
+    
+    // Retourner au tableau de compétences
+    showSection('tableau-competences');
+    
+    console.log('Retour au tableau effectué');
+}
+
+// Rendre les fonctions disponibles globalement (immédiatement)
+window.openMissionDetail = openMissionDetail;
+window.closeMissionDetail = closeMissionDetail;
+
+console.log('Fonctions de mission définies et disponibles globalement');
+
+// Navigation par sections
+function showSection(sectionId) {
+    // Masquer toutes les sections
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+        section.style.display = 'none';
+    });
+    
+    // Afficher la section demandée
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+        targetSection.classList.add('active');
+    }
+    
+    // Mettre à jour la navigation active
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+}
+
+// Initialiser la navigation
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM chargé - Initialisation de la navigation et vérification des fonctions:');
+    console.log('openMissionDetail disponible:', typeof window.openMissionDetail);
+    console.log('closeMissionDetail disponible:', typeof window.closeMissionDetail);
+    console.log('missionData disponible:', typeof missionData);
+    
+    // Masquer les éléments indésirables contenant des chiffres binaires
+    hideUnwantedElements();
+    
+    // Afficher la section accueil par défaut
+    showSection('accueil');
+    
+    // Ajouter les événements de clic pour la navigation
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('href').substring(1);
+            showSection(sectionId);
+        });
+    });
+    
+    // Test si l'élément cliquable existe
+    const missionElement = document.querySelector('.mission-title-clickable');
+    console.log('Élément mission clickable trouvé:', !!missionElement);
+    if (missionElement) {
+        console.log('Onclick attribute:', missionElement.getAttribute('onclick'));
+    }
+});
+
+// Rendre la fonction showSection disponible globalement
+window.showSection = showSection;
 
 // Création de l'effet Matrix
 function createMatrixEffect() {
@@ -410,34 +869,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Gestion du défilement de la molette
-document.addEventListener('wheel', function(e) {
-    const currentSection = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2).closest('.section');
-    
-    if (!currentSection) return;
-    
-    const sectionContent = currentSection.querySelector('.container');
-    const sectionRect = currentSection.getBoundingClientRect();
-    const isScrollable = sectionContent.scrollHeight > sectionContent.clientHeight;
-    
-    // Si la section n'est pas scrollable ou si on est au début/fin de la section
-    if (!isScrollable || 
-        (sectionContent.scrollTop === 0 && e.deltaY < 0) || 
-        (sectionContent.scrollTop + sectionContent.clientHeight >= sectionContent.scrollHeight && e.deltaY > 0)) {
-        e.preventDefault();
-        
-        // Navigation entre les sections
-        const sections = Array.from(document.querySelectorAll('.section'));
-        const currentIndex = sections.indexOf(currentSection);
-        
-        if (e.deltaY > 0 && currentIndex < sections.length - 1) {
-            sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
-        } else if (e.deltaY < 0 && currentIndex > 0) {
-            sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-}, { passive: false });
-
 // Données des popups pour chaque compétence
 const popupData = {
     'gerer-patrimoine-parc': {
@@ -582,6 +1013,9 @@ const popupData = {
     // Ajoutez les autres données selon le même modèle...
 };
 
+// Debug - vérifier que les fonctions sont bien définies
+console.log('PopupData loaded, maintenant les fonctions de mission devraient être disponibles');
+
 // Gestion de la popup
 document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('competence-popup');
@@ -665,3 +1099,109 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Fonction pour masquer les éléments indésirables contenant des chiffres binaires
+function hideUnwantedElements() {
+    // Chercher tous les éléments contenant "10110" ou patterns similaires
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(element => {
+        const text = element.textContent || element.innerText || '';
+        // Vérifier si l'élément contient uniquement des chiffres binaires
+        if (text.trim() === '10110' || text.trim().match(/^[01]{4,}$/)) {
+            element.style.display = 'none';
+            console.log('Élément contenant des chiffres binaires masqué:', element, 'Contenu:', text.trim());
+        }
+    });
+    
+    // Masquer spécifiquement les éléments de débogage courants
+    const debugSelectors = [
+        '.CodeMirror-linenumbers',
+        '.line-numbers', 
+        '.monaco-line-numbers',
+        '[class*="line-number"]',
+        '[data-line]',
+        '[data-line-number]',
+        '.vscode-line-numbers'
+    ];
+    
+    debugSelectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+            el.style.display = 'none';
+            console.log('Élément de débogage masqué:', el);
+        });
+    });
+    
+    // Observer les mutations pour masquer les nouveaux éléments ajoutés dynamiquement
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1) { // Element node
+                    const text = node.textContent || node.innerText || '';
+                    if (text.trim().match(/^[01]{4,}$/)) {
+                        node.style.display = 'none';
+                        console.log('Nouvel élément binaire masqué:', node);
+                    }
+                }
+            });
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+}
+
+// Fonctions pour la modal d'images
+function openImageModal(imageData) {
+    // Créer la modal si elle n'existe pas
+    let modal = document.getElementById('image-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'image-modal';
+        modal.className = 'image-modal-overlay';
+        modal.innerHTML = `
+            <div class="image-modal-content">
+                <button class="image-modal-close">&times;</button>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-caption"></p>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Ajouter les événements de fermeture
+        const closeBtn = modal.querySelector('.image-modal-close');
+        closeBtn.addEventListener('click', closeImageModal);
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeImageModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeImageModal();
+            }
+        });
+    }
+    
+    // Remplir la modal avec les données de l'image
+    const modalImage = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    
+    modalImage.src = imageData.src;
+    modalImage.alt = imageData.alt;
+    modalCaption.textContent = imageData.caption;
+    
+    // Afficher la modal
+    modal.style.display = 'flex';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('image-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
