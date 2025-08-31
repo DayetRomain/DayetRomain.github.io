@@ -216,7 +216,7 @@ const missionData = {
                 title: 'Exploitation des normes VLAN (IEEE 802.1Q)',
                 images: [
                     {
-                        src: 'VELANNE.img/Exploitation des normes VLAN (IEEE 802.1Q)/Création de VLAN.png',
+                        src: 'VELANNE.img/Exploitation des normes VLAN %28IEEE 802.1Q%29/Création de VLAN.png',
                         alt: 'Création de VLAN',
                         caption: 'Interface de création de VLAN selon les normes IEEE 802.1Q'
                     }
@@ -226,7 +226,7 @@ const missionData = {
                 title: 'Mise en place du VLAN 99 (administration)',
                 images: [
                     {
-                        src: 'VELANNE.img/Mise en place du VLAN 99 (administration)/Création et config VLAN administration.png',
+                        src: 'VELANNE.img/Mise en place du VLAN 99 %28administration%29/Création et config VLAN administration.png',
                         alt: 'Configuration VLAN administration',
                         caption: 'Création et configuration du VLAN 99 pour l\'administration des switchs'
                     }
@@ -236,7 +236,7 @@ const missionData = {
                 title: 'Vérification de la continuité du service (tests de ping intra/inter-VLAN)',
                 images: [
                     {
-                        src: 'VELANNE.img/Vérification de la continuité du service (tests de ping intrainter-VLAN)/plan de test.png',
+                        src: 'VELANNE.img/Vérification de la continuité du service %28tests de ping intrainter-VLAN%29/plan de test.png',
                         alt: 'Plan de test VLAN',
                         caption: 'Plan de test pour vérifier la continuité du service et les communications intra/inter-VLAN'
                     }
@@ -246,7 +246,7 @@ const missionData = {
                 title: 'Réponse à la demande d\'isoler les réseaux',
                 images: [
                     {
-                        src: 'VELANNE.img/Réponse à la demande d\'isoler les réseaux/Création VLANs utilisateurs.png',
+                        src: 'VELANNE.img/Réponse à la demande d%27isoler les réseaux/Création VLANs utilisateurs.png',
                         alt: 'Création VLANs utilisateurs',
                         caption: 'Création des VLANs utilisateurs pour isoler les réseaux des différentes ligues'
                     }
@@ -267,23 +267,68 @@ const missionData = {
     kiwi: {
         title: 'MISSION KIWI',
         subtitle: 'Mission Kiwi',
-        context: 'La mission Kiwi consistait à déployer une infrastructure serveur complète basée sur Ubuntu Server, incluant la configuration d\'un serveur DHCP, la mise en place d\'un point d\'accès Wi-Fi et la configuration de routeurs pour assurer une connectivité optimale.',
+        context: 'Mise en place d\'un Wi-Fi sécurisé et d\'un serveur DHCP pour automatiser l\'attribution des adresses IP.',
         objectives: [
-            'Installer et configurer Ubuntu Server',
-            'Mettre en place un serveur DHCP fonctionnel',
-            'Configurer un point d\'accès Wi-Fi sécurisé',
-            'Optimiser la configuration des routeurs'
+            'Sécuriser l\'accès au Wi-Fi avec une clé WPA',
+            'Simplifier la gestion avec un serveur DHCP',
+            'Garantir la continuité en testant la connectivité'
         ],
         steps: [
             {
-                title: 'Installation Ubuntu Server',
-                images: []
+                title: 'Sécurisation du Wi-Fi (WPA-Personnal)',
+                images: [
+                    {
+                        src: 'KIWI.img/S%C3%A9curisation du Wi-Fi %28WPA-Personnal%29/config WPA-Personnal + cl%C3%A9.png',
+                        alt: 'Configuration WPA-Personnal avec clé',
+                        caption: 'Configuration de la sécurisation Wi-Fi avec WPA-Personnal et définition de la clé de sécurité'
+                    }
+                ]
             },
-            'Configuration du serveur DHCP',
-            'Mise en place du point d\'accès Wi-Fi',
-            'Configuration des routeurs',
-            'Tests de connectivité',
-            'Optimisation des performances'
+            {
+                title: 'Vérification de la continuité (tests ping + attribution IP DHCP)',
+                images: [
+                    {
+                        src: 'KIWI.img/V%C3%A9rification de la continuit%C3%A9 %28tests ping + attribution IP DHCP%29/Adresse IP attribu%C3%A9e automatiquement.png',
+                        alt: 'Adresse IP attribuée automatiquement',
+                        caption: 'Vérification que l\'adresse IP est attribuée automatiquement par le serveur DHCP'
+                    },
+                    {
+                        src: 'KIWI.img/V%C3%A9rification de la continuit%C3%A9 %28tests ping + attribution IP DHCP%29/Configuration DHCP filaire & Wi-Fi.png',
+                        alt: 'Configuration DHCP filaire et Wi-Fi',
+                        caption: 'Configuration du serveur DHCP pour les connexions filaire et Wi-Fi'
+                    }
+                ]
+            },
+            {
+                title: 'Réponse à la demande d\'automatiser l\'attribution IP',
+                images: [
+                    {
+                        src: 'KIWI.img/Réponse à la demande d%27automatiser l%27attribution IP/Réservations DHCP %28MAC → IP%29.png',
+                        alt: 'Réservations DHCP MAC vers IP',
+                        caption: 'Configuration des réservations DHCP pour associer des adresses MAC à des adresses IP fixes'
+                    }
+                ]
+            },
+            {
+                title: 'Déploiement du point d\'accès et du serveur DHCP',
+                images: [
+                    {
+                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Config du point acc%C3%A8s Wi-Fi.png',
+                        alt: 'Configuration du point d\'accès Wi-Fi',
+                        caption: 'Configuration et paramétrage du point d\'accès Wi-Fi pour assurer la connectivité sans fil'
+                    },
+                    {
+                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Installation du serveur DHCP Ubuntu.png',
+                        alt: 'Installation du serveur DHCP Ubuntu',
+                        caption: 'Installation et configuration du serveur DHCP sur Ubuntu Server'
+                    },
+                    {
+                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Configuration du DHCP %28fichier dhcpd.conf%29.png',
+                        alt: 'Configuration du DHCP fichier dhcpd.conf',
+                        caption: 'Configuration détaillée du serveur DHCP via le fichier dhcpd.conf'
+                    }
+                ]
+            }
         ]
     }
 };
@@ -1009,6 +1054,132 @@ const popupData = {
             'Support post-déploiement'
         ],
         skills: ['Tests réseau', 'Migration', 'Formation technique', 'Validation', 'Support']
+    },
+    'gerer-patrimoine-sisr2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'incidents-sisr2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'service-sisr2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'presence-en-ligne-portfolio': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'dev-professionnel-portfolio': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'gerer-patrimoine-mission1': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'incidents-mission1': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'service-mission1': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'dev-professionnel-mission1': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'presence-en-ligne-mission2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'mode-projet-mission2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'dev-professionnel-mission2': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'gerer-patrimoine-mission3': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'incidents-mission3': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'mode-projet-mission3': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'service-mission3': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'dev-professionnel-mission3': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'gerer-patrimoine-mission4': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'incidents-mission4': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'service-mission4': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
+    },
+    'dev-professionnel-mission4': {
+        title: '',
+        description: '',
+        tasks: [],
+        skills: []
     }
     // Ajoutez les autres données selon le même modèle...
 };
@@ -1074,13 +1245,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Ajouter les événements de clic sur les cases cliquables
-    document.querySelectorAll('.competence.clickable').forEach(cell => {
-        cell.addEventListener('click', function() {
-            const dataKey = this.getAttribute('data-popup');
-            openPopup(dataKey);
-        });
-    });
+    // Ajouter les événements de clic sur les cases cliquables - DÉSACTIVÉ
+    // document.querySelectorAll('.competence.clickable').forEach(cell => {
+    //     cell.addEventListener('click', function() {
+    //         const dataKey = this.getAttribute('data-popup');
+    //         openPopup(dataKey);
+    //     });
+    // });
 
     // Fermer la popup avec le bouton X
     closeBtn.addEventListener('click', closePopup);

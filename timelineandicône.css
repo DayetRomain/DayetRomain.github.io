@@ -1027,7 +1027,7 @@ html {
 }
 
 .tableau-synthese td {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(23, 10, 54, 0.2);
 }
 
 .tableau-synthese .section-header {
@@ -1233,7 +1233,7 @@ html {
 
 /* Styles pour les cases cliquables du tableau */
 .tableau-synthese .competence.clickable {
-    cursor: pointer;
+    cursor: default;
     transition: all 0.3s ease;
     position: relative;
     border-radius: 6px;
@@ -1678,7 +1678,7 @@ html {
 }
 
 #mission-detail-subtitle::before {
-    content: '📝';
+    content: '';
     font-size: 2rem;
 }
 
@@ -1726,7 +1726,7 @@ html {
 }
 
 #mission-objectives li::before {
-    content: '🎯';
+    content: '•';
     position: absolute;
     left: 0;
     top: 0;
@@ -2110,5 +2110,152 @@ html {
         font-size: 1rem;
         margin-top: 10px;
         padding: 0 10px;
+    }
+}
+
+/* Styles pour la section Situation Professionnelle */
+#situation {
+    background: var(--bleu-fonce);
+    color: var(--texte-blanc);
+    padding: 100px 0;
+}
+
+#situation h2 {
+    color: var(--accent-bleu);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.projets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projet-card {
+    background: var(--bleu-moyen);
+    border: 1px solid var(--bleu-clair);
+    border-radius: 15px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.projet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-bleu), var(--accent-vert));
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(100, 255, 218, 0.15);
+    border-color: var(--accent-bleu);
+}
+
+.projet-card h3 {
+    color: var(--accent-bleu);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.projet-card p {
+    color: var(--texte-gris);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.technologies {
+    color: var(--texte-blanc) !important;
+    font-size: 1rem;
+    margin-bottom: 30px !important;
+}
+
+.projet-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-projet {
+    background: transparent;
+    border: 2px solid var(--accent-bleu);
+    color: var(--accent-bleu);
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-projet:hover {
+    background: var(--accent-bleu);
+    color: var(--bleu-fonce);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Responsive pour la section projets */
+@media (max-width: 768px) {
+    #situation {
+        padding: 60px 0;
+    }
+    
+    #situation h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .projets-grid {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .projet-card {
+        padding: 25px;
+        min-height: 160px;
+    }
+    
+    .projet-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .projet-card p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .technologies {
+        font-size: 0.9rem;
+        margin-bottom: 20px !important;
+    }
+    
+    .btn-projet {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .projet-buttons {
+        gap: 15px;
     }
 }
