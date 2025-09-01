@@ -334,26 +334,83 @@ const missionData = {
     },
     preparation: {
         title: 'PRÉPARATION DE POSTE INFORMATIQUE',
-        subtitle: 'Préparation de Poste Informatique',
-        context: 'Mission de préparation et configuration de postes informatiques dans un environnement professionnel, incluant l\'installation du système d\'exploitation, des logiciels métier et la configuration réseau.',
+        subtitle: 'Mission 1 : Préparation de poste informatique',
+        context: 'Préparer des postes pour qu\'ils soient conformes aux standards ANRAS.',
         objectives: [
-            'Installer et configurer un système d\'exploitation',
-            'Déployer les logiciels métier nécessaires',
-            'Configurer les paramètres réseau et sécurité',
-            'Effectuer les tests de validation'
+            'Standardisation des postes',
+            'Sécurité (BitLocker, mises à jour, antivirus)',
+            'Compatibilité avec logiciels métiers'
         ],
         steps: [
             {
-                title: 'Installation du système d\'exploitation',
-                images: []
+                title: 'Installation et configuration système',
+                images: [
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Installation et configuration syst%C3%A8me/Installation Windows 11.png',
+                        alt: 'Installation Windows 11',
+                        caption: 'Installation du système d\'exploitation Windows 11 sur le poste de travail'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Installation et configuration syst%C3%A8me/renommage du poste.png',
+                        alt: 'Renommage du poste',
+                        caption: 'Configuration du nom du poste selon les standards ANRAS'
+                    }
+                ]
             },
             {
-                title: 'Configuration des logiciels métier',
-                images: []
+                title: 'Sécurisation et mises à jour',
+                images: [
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/activation TPM et Secure Boot, antivirus Windows Defender activ%C3%A9.png',
+                        alt: 'Activation TPM et Secure Boot, antivirus Windows Defender activé',
+                        caption: 'Activation des fonctionnalités de sécurité TPM, Secure Boot et Windows Defender'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/application des mises %C3%A0 jour.png',
+                        alt: 'Application des mises à jour',
+                        caption: 'Installation des dernières mises à jour de sécurité Windows'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/Chiffrement Bitlocker.png',
+                        alt: 'Chiffrement BitLocker',
+                        caption: 'Configuration et activation du chiffrement BitLocker pour sécuriser les données'
+                    }
+                ]
             },
             {
-                title: 'Paramétrage réseau et sécurité',
-                images: []
+                title: 'Mises à jour matérielles',
+                images: [
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Mises %C3%A0 jour mat%C3%A9rielles/V%C3%A9rification des mises %C3%A0 jour.png',
+                        alt: 'Vérification des mises à jour',
+                        caption: 'Vérification et recherche des mises à jour matérielles disponibles'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Mises %C3%A0 jour mat%C3%A9rielles/application des mises %C3%A0 jour.png',
+                        alt: 'Application des mises à jour matérielles',
+                        caption: 'Installation des pilotes et mises à jour matérielles nécessaires'
+                    }
+                ]
+            },
+            {
+                title: 'Installation des logiciels métiers',
+                images: [
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/Installation de edge et office.png',
+                        alt: 'Installation de Edge et Office',
+                        caption: 'Installation des logiciels Microsoft Edge et Office pour les besoins métiers'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/Sharepoint.png',
+                        alt: 'Configuration SharePoint',
+                        caption: 'Configuration et accès à la plateforme SharePoint de l\'organisation'
+                    },
+                    {
+                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/synchronisation du SharePoint.png',
+                        alt: 'Synchronisation SharePoint',
+                        caption: 'Configuration de la synchronisation automatique avec SharePoint'
+                    }
+                ]
             }
         ]
     },
