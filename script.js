@@ -330,6 +330,107 @@ const missionData = {
                 ]
             }
         ]
+
+    },
+    preparation: {
+        title: 'PRÉPARATION DE POSTE INFORMATIQUE',
+        subtitle: 'Préparation de Poste Informatique',
+        context: 'Mission de préparation et configuration de postes informatiques dans un environnement professionnel, incluant l\'installation du système d\'exploitation, des logiciels métier et la configuration réseau.',
+        objectives: [
+            'Installer et configurer un système d\'exploitation',
+            'Déployer les logiciels métier nécessaires',
+            'Configurer les paramètres réseau et sécurité',
+            'Effectuer les tests de validation'
+        ],
+        steps: [
+            {
+                title: 'Installation du système d\'exploitation',
+                images: []
+            },
+            {
+                title: 'Configuration des logiciels métier',
+                images: []
+            },
+            {
+                title: 'Paramétrage réseau et sécurité',
+                images: []
+            }
+        ]
+    },
+    ehpad: {
+        title: 'MISE EN LIGNE D\'UN ARTICLE EHPAD SAINTE MONIQUE',
+        subtitle: 'Mise en ligne article EHPAD Sainte Monique',
+        context: 'Projet de création et mise en ligne d\'un article pour l\'EHPAD Sainte Monique, incluant la rédaction du contenu, l\'intégration sur le site web et la validation avec l\'équipe de communication.',
+        objectives: [
+            'Rédiger un contenu adapté au public cible',
+            'Intégrer l\'article sur le site web existant',
+            'Optimiser le référencement (SEO)',
+            'Valider la publication avec les parties prenantes'
+        ],
+        steps: [
+            {
+                title: 'Rédaction et préparation du contenu',
+                images: []
+            },
+            {
+                title: 'Intégration web et mise en forme',
+                images: []
+            },
+            {
+                title: 'Validation et publication',
+                images: []
+            }
+        ]
+    },
+    susie: {
+        title: 'MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET SUSIE',
+        subtitle: 'Projet SUSIE - Fibre optique FTTH',
+        context: 'Déploiement de la fibre optique FTTH (Fiber To The Home) dans le cadre du projet SUSIE, incluant l\'étude technique, l\'installation des équipements et la mise en service du réseau.',
+        objectives: [
+            'Analyser les besoins techniques du déploiement FTTH',
+            'Installer et configurer les équipements fibre optique',
+            'Effectuer les tests de performance et validation',
+            'Assurer la mise en service et la documentation'
+        ],
+        steps: [
+            {
+                title: 'Étude technique et planification',
+                images: []
+            },
+            {
+                title: 'Installation des équipements FTTH',
+                images: []
+            },
+            {
+                title: 'Tests et mise en service',
+                images: []
+            }
+        ]
+    },
+    webex: {
+        title: 'MISE À JOUR ET INTÉGRATION DES CONTACTS DES ÉTABLISSEMENTS DANS WEBEX CONTROL HUB',
+        subtitle: 'Gestion contacts Webex Control Hub',
+        context: 'Projet de mise à jour et d\'intégration des contacts des établissements dans la plateforme Webex Control Hub pour optimiser la gestion des communications et des réunions en ligne.',
+        objectives: [
+            'Centraliser les contacts des établissements',
+            'Configurer Webex Control Hub selon les besoins',
+            'Automatiser les processus de gestion des contacts',
+            'Former les utilisateurs aux nouvelles fonctionnalités'
+        ],
+        steps: [
+            {
+                title: 'Audit et collecte des contacts existants',
+                images: []
+            },
+            {
+                title: 'Configuration de Webex Control Hub',
+                images: []
+            },
+            {
+                title: 'Intégration et tests des contacts',
+                images: []
+            }
+        ]
     }
 };
 
@@ -1375,4 +1476,31 @@ function closeImageModal() {
     if (modal) {
         modal.style.display = 'none';
     }
+}
+
+// Fonctions pour la veille technologique
+function openVeilleDetail(type) {
+    // Masquer toutes les sections de veille
+    const allDetails = document.querySelectorAll('.veille-detail');
+    allDetails.forEach(detail => {
+        detail.style.display = 'none';
+    });
+    
+    // Afficher la section demandée
+    const targetDetail = document.getElementById(`veille-${type}-detail`);
+    if (targetDetail) {
+        targetDetail.style.display = 'block';
+        // Faire défiler vers la section
+        targetDetail.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+}
+
+function closeVeilleDetail() {
+    const allDetails = document.querySelectorAll('.veille-detail');
+    allDetails.forEach(detail => {
+        detail.style.display = 'none';
+    });
 }

@@ -2259,3 +2259,264 @@ html {
         gap: 15px;
     }
 }
+
+/* Styles pour la section Veille Technologique */
+#veille {
+    background: var(--bleu-fonce);
+    color: var(--texte-blanc);
+    padding: 100px 0;
+}
+
+#veille h2 {
+    color: var(--accent-bleu);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.veille-intro {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.veille-intro p {
+    color: var(--texte-gris);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.veille-card {
+    background: var(--bleu-moyen);
+    border: 1px solid var(--bleu-clair);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.veille-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-bleu), var(--accent-vert));
+}
+
+.veille-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15);
+    border-color: var(--accent-bleu);
+}
+
+.veille-icon {
+    margin-bottom: 20px;
+}
+
+.veille-icon i {
+    font-size: 3rem;
+    color: var(--accent-bleu);
+}
+
+.veille-card h3 {
+    color: var(--accent-bleu);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.veille-card p {
+    color: var(--texte-gris);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Styles pour le contenu détaillé de la veille */
+.veille-detail {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    background: var(--bleu-moyen);
+    border-radius: 15px;
+    border: 1px solid var(--bleu-clair);
+    position: relative;
+}
+
+.veille-detail-content {
+    padding: 40px;
+    position: relative;
+}
+
+.close-detail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--accent-bleu);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-detail:hover {
+    background: var(--bleu-clair);
+    color: var(--accent-vert);
+}
+
+.veille-detail h3 {
+    color: var(--accent-bleu);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.veille-section {
+    margin-bottom: 30px;
+}
+
+.veille-section h4 {
+    color: var(--accent-vert);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-left: 3px solid var(--accent-bleu);
+    padding-left: 15px;
+}
+
+.veille-section p {
+    color: var(--texte-gris);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.veille-section ul {
+    color: var(--texte-gris);
+    line-height: 1.7;
+    padding-left: 20px;
+}
+
+.veille-section li {
+    margin-bottom: 8px;
+}
+
+.veille-section strong {
+    color: var(--texte-blanc);
+}
+
+/* Styles pour les boutons d'accès à la veille */
+.veille-access {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--bleu-clair);
+}
+
+.btn-veille {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, var(--accent-bleu), var(--accent-vert));
+    color: var(--bleu-fonce);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.btn-veille:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.4);
+    background: linear-gradient(45deg, var(--accent-vert), var(--accent-bleu));
+}
+
+.btn-veille i {
+    font-size: 0.9rem;
+}
+
+/* Animation pour l'ouverture du détail */
+.veille-detail {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive pour la veille */
+@media (max-width: 768px) {
+    #veille {
+        padding: 60px 0;
+    }
+    
+    #veille h2 {
+        font-size: 2rem;
+    }
+    
+    .veille-intro {
+        padding: 0 20px;
+    }
+    
+    .veille-intro p {
+        font-size: 1rem;
+    }
+    
+    .veille-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .veille-card {
+        padding: 30px 20px;
+    }
+    
+    .veille-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .veille-detail-content {
+        padding: 25px;
+    }
+    
+    .veille-detail h3 {
+        font-size: 1.5rem;
+    }
+    
+    .veille-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .btn-veille {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}

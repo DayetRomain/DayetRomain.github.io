@@ -176,10 +176,10 @@
                     </div>
                 </div>
 
-                <!-- Projet Portfolio Personnel -->
+                <!-- Projet Portfolio -->
                 <div class="projet-card">
-                    <h3>Portfolio Personnel</h3>
-                    <p>Mon portfolio personnel hébergé sur GitHub Pages. Site web responsive présentant mon parcours, mes compétences et mes projets avec ma veille technologique.</p>
+                    <h3>Portfolio</h3>
+                    <p>Mon portfolio hébergé sur GitHub Pages. Site web responsive présentant mon parcours, mes compétences et mes projets avec ma veille technologique.</p>
                     <p class="technologies"><strong>Technologies :</strong> HTML, CSS, JavaScript, GitHub Pages</p>
                     <div class="projet-buttons">
                         <a href="https://github.com/DayetRomain/DayetRomain.github.io" target="_blank" class="btn-projet">Voir le GitHub</a>
@@ -330,7 +330,7 @@
                             <td colspan="8">RÉALISATIONS EN MILIEU PROFESSIONNEL EN COURS DE PREMIÈRE ANNÉE</td>
                         </tr>
                         <tr>
-                            <td>PRÉPARATION DE POSTE INFORMATIQUE</td>
+                            <td><span class="mission-title-clickable" onclick="openMissionDetail('preparation')">PRÉPARATION DE POSTE INFORMATIQUE</span></td>
                             <td class="periode"></td>
                             <td class="competence clickable" data-popup="gerer-patrimoine-mission1">✓</td>
                             <td class="competence clickable" data-popup="incidents-mission1">✓</td>
@@ -340,7 +340,7 @@
                             <td class="competence clickable" data-popup="dev-professionnel-mission1">✓</td>
                         </tr>
                         <tr>
-                            <td>MISE EN LIGNE D'UN ARTICLE EHPAD SAINTE MONIQUE</td>
+                            <td><span class="mission-title-clickable" onclick="openMissionDetail('ehpad')">MISE EN LIGNE D'UN ARTICLE EHPAD SAINTE MONIQUE</span></td>
                             <td class="periode"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
@@ -350,7 +350,7 @@
                             <td class="competence clickable" data-popup="dev-professionnel-mission2">✓</td>
                         </tr>
                         <tr>
-                            <td>MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET SUSIE</td>
+                            <td><span class="mission-title-clickable" onclick="openMissionDetail('susie')">MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET SUSIE</span></td>
                             <td class="periode"></td>
                             <td class="competence clickable" data-popup="gerer-patrimoine-mission3">✓</td>
                             <td class="competence clickable" data-popup="incidents-mission3">✓</td>
@@ -360,7 +360,7 @@
                             <td class="competence clickable" data-popup="dev-professionnel-mission3">✓</td>
                         </tr>
                         <tr>
-                            <td>MISE À JOUR ET INTÉGRATION DES CONTACTS DES ÉTABLISSEMENTS DANS WEBEX CONTROL HUB</td>
+                            <td><span class="mission-title-clickable" onclick="openMissionDetail('webex')">MISE À JOUR ET INTÉGRATION DES CONTACTS DES ÉTABLISSEMENTS DANS WEBEX CONTROL HUB</span></td>
                             <td class="periode"></td>
                             <td class="competence clickable" data-popup="gerer-patrimoine-mission4">✓</td>
                             <td class="competence clickable" data-popup="incidents-mission4">✓</td>
@@ -387,6 +387,185 @@
                         <button class="scroll-arrow" id="scroll-right">
                             <i class="fas fa-chevron-right"></i>
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Veille Technologique -->
+    <section id="veille" class="section">
+        <div class="container">
+            <h2>Veille Technologique</h2>
+            <div class="veille-intro">
+                <p>En 2025, l'IA et la cybersécurité sont indissociables. Les avancées comme GPT-5, Copilot ou la création multimédia transforment les usages, mais l'IA alimente aussi des attaques plus sophistiquées, entre ransomwares automatisés, phishing et deepfakes. Face à ces menaces, intégrer l'IA aux stratégies de cybersécurité devient indispensable.</p>
+                <p>Vous trouverez ci-dessous mes synthèses de veille technologique, regroupant les dernières tendances et analyses sur l'IA et la cybersécurité.</p>
+            </div>
+            
+            <div class="veille-grid">
+                <!-- Carte Intelligence Artificielle -->
+                <div class="veille-card" onclick="openVeilleDetail('ia')">
+                    <div class="veille-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Veille Technologique – Intelligence Artificielle</p>
+                </div>
+
+                <!-- Carte Cybersécurité -->
+                <div class="veille-card" onclick="openVeilleDetail('cyber')">
+                    <div class="veille-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersécurité</h3>
+                    <p>Actualités et tendances en sécurité informatique</p>
+                </div>
+            </div>
+
+            <!-- Contenu détaillé de la veille IA (masqué par défaut) -->
+            <div id="veille-ia-detail" class="veille-detail" style="display: none;">
+                <div class="veille-detail-content">
+                    <button class="close-detail" onclick="closeVeilleDetail()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h3>Veille Technologique – Intelligence Artificielle</h3>
+                    
+                    <div class="veille-section">
+                        <h4>1. Définition du thème de veille</h4>
+                        <p>Cette veille porte sur les avancées majeures en Intelligence Artificielle en 2025, avec un focus sur :</p>
+                        <ul>
+                            <li>Les nouveaux modèles de langage (GPT-5, LLaMA 3, Mistral AI)</li>
+                            <li>L'intégration de l'IA générative dans les outils professionnels (Copilot Microsoft, Gemini Google, ChatGPT pour l'éducation et la santé)</li>
+                            <li>L'usage de l'IA pour la création multimédia (vidéo, musique, images générées automatiquement)</li>
+                            <li>L'impact économique et social de l'IA (emploi, productivité)</li>
+                            <li>Les enjeux éthiques et réglementaires (AI Act européen, directives CNIL)</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>2. Stratégie de collecte</h4>
+                        <p>Pour cette veille, j'ai utilisé Flipboard afin d'agréger les articles pertinents.<br>
+                        Les sources sélectionnées incluent :</p>
+                        <ul>
+                            <li><strong>ActuIA</strong> (nouveaux modèles de langage, GPT-5)</li>
+                            <li><strong>Clubic</strong> (intégration de l’IA dans les outils professionnels)</li>
+                            <li><strong>Les Inrockuptibles</strong> (IA et création multimédia, musique)</li>
+                            <li><strong>Euractiv</strong> (AI Act, cadre réglementaire européen)</li>
+                        </ul>
+                         <strong> Mise à jour :</strong> la veille est actualisée de manière hebdomadaire, avec une synthèse mensuelle.</p>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>3. Exploitation des données (bonnes pratiques)</h4>
+                        <ul>
+                            <li><strong>Vérification</strong> : comparer plusieurs sources avant d'intégrer une information.</li>
+                            <li><strong>Citation</strong> : mentionner l'auteur et la source pour chaque article.</li>
+                            <li><strong>Pertinence</strong> : ne garder que les articles apportant des informations récentes et directement liées aux usages de l'IA.</li>
+                            <li><strong>Éthique</strong> : respect des droits d'auteur, pas de plagiat, respect des données personnelles.</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>4. Synthèse des avancées majeures en IA en 2025</h4>
+                        <ul>
+                            <li><strong>Nouveaux modèles de langage</strong> : GPT-5, LLaMA 3 et Mistral AI améliorent la compréhension et la génération de texte, avec des performances accrues.</li>
+                            <li><strong>IA générative intégrée aux outils</strong> : Microsoft Copilot, Google Gemini et ChatGPT Enterprise transforment la productivité des entreprises et l'éducation.</li>
+                            <li><strong>IA et création multimédia</strong> : explosion des outils capables de générer vidéos, musiques et contenus visuels professionnels.</li>
+                            <li><strong>Impact sur l'emploi</strong> : augmentation de la productivité, mais inquiétudes sur certains métiers menacés par l'automatisation.</li>
+                            <li><strong>Réglementation et éthique</strong> : l'AI Act européen entre en vigueur, encadrant les usages de l'IA, surtout en santé, éducation et sécurité.</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>5. Diffusion</h4>
+                        <p>Les résultats de cette veille sont partagés dans mon ePortfolio, dans une section dédiée à l'IA. Cette diffusion inclut :</p>
+                        <ul>
+                            <li>Des articles mensuels de synthèse résumant les principales évolutions,</li>
+                            <li>Des infographies mettant en avant les tendances clés,</li>
+                            <li>Des liens Flipboard vers les articles originaux,</li>
+                            <li>Une veille comparée permettant d'analyser l'évolution des tendances mois après mois.</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-access">
+                        <a href="https://flipboard.com/@dayetromain/veille-intelligence-artificielle-ia-ofpm465gy" target="_blank" class="btn-veille">
+                            <i class="fas fa-external-link-alt"></i>
+                            Accéder à ma veille technologique - Intelligence Artificielle
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu détaillé de la veille Cybersécurité (masqué par défaut) -->
+            <div id="veille-cyber-detail" class="veille-detail" style="display: none;">
+                <div class="veille-detail-content">
+                    <button class="close-detail" onclick="closeVeilleDetail()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h3>Veille Technologique – Cybersécurité</h3>
+                    
+                    <div class="veille-section">
+                        <h4>1. Définition du thème de veille</h4>
+                        <p>Cette veille se concentre sur les tendances et menaces émergentes en cybersécurité en 2025, en mettant l'accent sur :</p>
+                        <ul>
+                            <li>L'augmentation et l'automatisation des attaques par ransomware</li>
+                            <li>L'usage de l'IA dans les cyberattaques (phishing cognitif, deepfakes)</li>
+                            <li>Les enjeux de la sécurité du cloud et des environnements hybrides</li>
+                            <li>Les attaques ciblant les hôpitaux et services publics</li>
+                            <li>L'évolution des réglementations (directive NIS2, RGPD renforcé en Europe)</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>2. Stratégie de collecte</h4>
+                        <p>Pour cette veille, j'ai utilisé Flipboard afin d'agréger et organiser les articles pertinents.<br>
+                        Les sources sélectionnées incluent :</p>
+                        <ul>
+                            <li><strong>Siècle Digital</strong>(actualité cybersécurité : ransomware, cloud, vulnérabilités Microsoft 365)</li>
+                            <li><strong>Numerama</strong>(analyse des ransomwares boostés à l’IA et nouvelles menaces)</li>
+                            <li><strong>Euronews Français</strong>(phishing et escroqueries exploitant l’IA)</li>
+                        </ul>
+                        <strong> Mise à jour :</strong> la veille est actualisée de manière hebdomadaire, avec une synthèse mensuelle.</p>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>3. Exploitation des données (respect des bonnes pratiques)</h4>
+                        <ul>
+                            <li><strong>Vérification</strong> : recouper les infos entre plusieurs sources pour éviter les fake news.</li>
+                            <li><strong>Citation</strong> : mentionner l'auteur et la source pour chaque article.</li>
+                            <li><strong>Pertinence</strong> : sélectionner uniquement les articles qui concernent directement la cybersécurité en 2025.</li>
+                            <li><strong>Éthique</strong> : respecter les droits d'auteur et les données personnelles.</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>4. Synthèse des avancées et tendances en cybersécurité en 2025</h4>
+                        <ul>
+                            <li><strong>Ransomwares nouvelle génération</strong> : attaques de plus en plus automatisées et rapides, touchant les entreprises comme les administrations.</li>
+                            <li><strong>IA et cyberattaques</strong> : utilisation de deepfakes et d'IA générative pour créer des mails de phishing quasi indétectables.</li>
+                            <li><strong>Sécurité du cloud</strong> : généralisation de la stratégie Zero Trust pour sécuriser les environnements cloud publics et hybrides.</li>
+                            <li><strong>Attaques ciblant la santé</strong> : hôpitaux et établissements médico-sociaux restent des cibles prioritaires.</li>
+                            <li><strong>Réglementations</strong> : déploiement de la directive européenne NIS2 qui impose des obligations de cybersécurité accrues pour les structures critiques.</li>
+                        </ul>
+                    </div>
+
+                    <div class="veille-section">
+                        <h4>5. Diffusion</h4>
+                        <p>Les résultats de cette veille sont publiés dans mon ePortfolio (rubrique Cybersécurité) et comprennent :</p>
+                        <ul>
+                            <li>Des articles de synthèse mensuels résumant les principales tendances,</li>
+                            <li>Des infographies illustrant les menaces clés,</li>
+                            <li>Des liens Flipboard vers les articles originaux pour approfondir,</li>
+                            <li>Un suivi thématique permettant de comparer l'évolution mois par mois.</li>
+                        </ul>
+                        <p>Cette diffusion rend la veille accessible aux autres étudiants, encadrants, et professionnels intéressés.</p>
+                    </div>
+
+                    <div class="veille-access">
+                        <a href="https://flipboard.com/@dayetromain/veille-technologique---cybers-curit-n0b7ivrny" target="_blank" class="btn-veille">
+                            <i class="fas fa-external-link-alt"></i>
+                            Accéder à ma veille technologique - Cybersécurité
+                        </a>
                     </div>
                 </div>
             </div>
