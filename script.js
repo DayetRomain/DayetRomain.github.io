@@ -496,52 +496,104 @@ const missionData = {
         ]
     },
     susie: {
-        title: 'MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET SUSIE',
-        subtitle: 'Projet SUSIE - Fibre optique FTTH',
-        context: 'Déploiement de la fibre optique FTTH (Fiber To The Home) dans le cadre du projet SUSIE, incluant l\'étude technique, l\'installation des équipements et la mise en service du réseau.',
+        title: 'MISSION 3 : MISE EN ŒUVRE FIBRE OPTIQUE FTTH – PROJET SUSIE',
+        subtitle: 'Mission 3 : Mise en œuvre fibre optique FTTH – Projet SUSIE',
+        context: 'Participation au projet SUSIE pour moderniser le réseau.',
         objectives: [
-            'Analyser les besoins techniques du déploiement FTTH',
-            'Installer et configurer les équipements fibre optique',
-            'Effectuer les tests de performance et validation',
-            'Assurer la mise en service et la documentation'
+            'Déploiement fibre optique',
+            'Suivi administratif via SharePoint'
         ],
         steps: [
             {
-                title: 'Étude technique et planification',
-                images: []
+                title: 'Préparation et envoi des mails aux établissements',
+                images: [
+                    {
+                        src: 'fibreoptique.img/Pr%C3%A9paration%20et%20envoi%20des%20mails/Pr%C3%A9paration%20et%20envoi%20des%20mails.png',
+                        alt: 'Préparation et envoi des mails',
+                        caption: 'Processus de préparation et d\'envoi des communications aux établissements pour le projet SUSIE'
+                    }
+                ]
             },
             {
-                title: 'Installation des équipements FTTH',
-                images: []
+                title: 'Mise à jour du tableau de suivi administratif',
+                images: [
+                    {
+                        src: 'fibreoptique.img/Mise%20%C3%A0%20jour%20du%20suivi%20administratif/Suivi%20pas%20mis%20%C3%A0%20jour.png',
+                        alt: 'Suivi pas mis à jour',
+                        caption: 'État initial du tableau de suivi administratif avant mise à jour'
+                    },
+                    {
+                        src: 'fibreoptique.img/Mise%20%C3%A0%20jour%20du%20suivi%20administratif/Suivi%20mis%20%C3%A0%20jour.png',
+                        alt: 'Suivi mis à jour',
+                        caption: 'Tableau de suivi administratif après mise à jour avec les nouvelles données'
+                    }
+                ]
             },
             {
-                title: 'Tests et mise en service',
-                images: []
+                title: 'Coordination avec les techniciens et Orange',
+                images: [
+                    {
+                        src: 'fibreoptique.img/Coordination%20avec%20techniciens%20Orange/Mise%20en%20place%20de%20la%20fibre%20optique.png',
+                        alt: 'Mise en place de la fibre optique',
+                        caption: 'Coordination opérationnelle pour la mise en place de la fibre optique avec les équipes Orange'
+                    }
+                ]
             }
         ]
     },
     webex: {
-        title: 'MISE À JOUR ET INTÉGRATION DES CONTACTS DES ÉTABLISSEMENTS DANS WEBEX CONTROL HUB',
-        subtitle: 'Gestion contacts Webex Control Hub',
-        context: 'Projet de mise à jour et d\'intégration des contacts des établissements dans la plateforme Webex Control Hub pour optimiser la gestion des communications et des réunions en ligne.',
+        title: 'MISE À JOUR & INTÉGRATION DES CONTACTS – WEBEX CONTROL HUB',
+        subtitle: 'Mise à jour & intégration des contacts – Webex Control Hub',
+        context: 'Mise à jour et centralisation des contacts établissements dans Webex.',
         objectives: [
-            'Centraliser les contacts des établissements',
-            'Configurer Webex Control Hub selon les besoins',
-            'Automatiser les processus de gestion des contacts',
-            'Former les utilisateurs aux nouvelles fonctionnalités'
+            'Structurer un fichier CSV conforme',
+            'Importation automatisée dans Webex'
         ],
         steps: [
             {
-                title: 'Audit et collecte des contacts existants',
-                images: []
+                title: 'Collecte et structuration des données',
+                images: [
+                    {
+                        src: 'int%C3%A9grationsdescontacts.img/Collecte%20et%20structuration%20des%20donn%C3%A9es/croisement%20des%20informations.png',
+                        alt: 'Croisement des informations',
+                        caption: 'Processus de croisement et de vérification des informations de contact'
+                    },
+                    {
+                        src: 'int%C3%A9grationsdescontacts.img/Collecte%20et%20structuration%20des%20donn%C3%A9es/fichier%20CSV.png',
+                        alt: 'Fichier CSV',
+                        caption: 'Structure et organisation des données dans le fichier CSV'
+                    }
+                ]
             },
             {
-                title: 'Configuration de Webex Control Hub',
-                images: []
+                title: 'Préparation fichier CSV (UTF-8, séparateurs)',
+                images: [
+                    {
+                        src: 'int%C3%A9grationsdescontacts.img/Pr%C3%A9paration%20fichier%20CSV%20%28UTF-8%2C%20s%C3%A9parateurs%29/fichier%20CSV.png',
+                        alt: 'Fichier CSV préparé',
+                        caption: 'Fichier CSV final avec encodage UTF-8 et séparateurs corrects'
+                    }
+                ]
             },
             {
-                title: 'Intégration et tests des contacts',
-                images: []
+                title: 'Analyse et correction des erreurs',
+                images: [
+                    {
+                        src: 'int%C3%A9grationsdescontacts.img/Analyse%20et%20correction%20des%20erreurs/erreur%20premi%C3%A8re%20importation.png',
+                        alt: 'Erreur première importation',
+                        caption: 'Analyse des erreurs rencontrées lors de la première tentative d\'importation'
+                    }
+                ]
+            },
+            {
+                title: 'Importation réussie dans Webex',
+                images: [
+                    {
+                        src: 'int%C3%A9grationsdescontacts.img/Importation%20r%C3%A9ussie%20dans%20Webex/importation%20r%C3%A9ussi.png',
+                        alt: 'Importation réussie',
+                        caption: 'Confirmation de l\'importation réussie des contacts dans Webex Control Hub'
+                    }
+                ]
             }
         ]
     }
