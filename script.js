@@ -415,27 +415,83 @@ const missionData = {
         ]
     },
     ehpad: {
-        title: 'MISE EN LIGNE D\'UN ARTICLE EHPAD SAINTE MONIQUE',
-        subtitle: 'Mise en ligne article EHPAD Sainte Monique',
-        context: 'Projet de création et mise en ligne d\'un article pour l\'EHPAD Sainte Monique, incluant la rédaction du contenu, l\'intégration sur le site web et la validation avec l\'équipe de communication.',
+        title: 'MISE EN LIGNE D\'UN ARTICLE – EHPAD SAINTE MONIQUE',
+        subtitle: 'Mise en ligne d\'un article – EHPAD Sainte Monique',
+        context: 'Publication d\'un article institutionnel pour valoriser les actions de l\'EHPAD.',
         objectives: [
-            'Rédiger un contenu adapté au public cible',
-            'Intégrer l\'article sur le site web existant',
-            'Optimiser le référencement (SEO)',
-            'Valider la publication avec les parties prenantes'
+            'Renforcer la visibilité numérique',
+            'Valoriser un événement avec des partenaires'
         ],
         steps: [
             {
-                title: 'Rédaction et préparation du contenu',
-                images: []
+                title: 'Connexion à l\'interface K-Sup',
+                images: [
+                    {
+                        src: 'Miseenlignearticle.img/Connexion%20%C3%A0%20l\'interface%20K-Sup/connexion%20%C3%A0%20interface%20en%20admin.png',
+                        alt: 'Connexion à interface en admin',
+                        caption: 'Interface de connexion administrateur à la plateforme K-Sup'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/Connexion%20%C3%A0%20l\'interface%20K-Sup/R%C3%A9sulat%20connexion%20admin.png',
+                        alt: 'Résultat connexion admin',
+                        caption: 'Confirmation de la connexion réussie en tant qu\'administrateur'
+                    }
+                ]
             },
             {
-                title: 'Intégration web et mise en forme',
-                images: []
+                title: 'Création de la fiche article',
+                images: [
+                    {
+                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/Choix%20de%20rubrique.png',
+                        alt: 'Choix de rubrique',
+                        caption: 'Sélection de la rubrique appropriée pour l\'article EHPAD Sainte Monique'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/cr%C3%A9ation%20de%20la%20fiche.png',
+                        alt: 'Création de la fiche',
+                        caption: 'Interface de création de la fiche article dans le système K-Sup'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/Rattachement%20%C3%A0%20la%20strucure.png',
+                        alt: 'Rattachement à la structure',
+                        caption: 'Configuration du rattachement de l\'article à la structure EHPAD'
+                    }
+                ]
             },
             {
-                title: 'Validation et publication',
-                images: []
+                title: 'Rédaction et ajout d\'images',
+                images: [
+                    {
+                        src: 'Miseenlignearticle.img/R%C3%A9daction%20et%20ajout%20images/insertion%20du%20texte.png',
+                        alt: 'Insertion du texte',
+                        caption: 'Rédaction et insertion du contenu textuel de l\'article'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/R%C3%A9daction%20et%20ajout%20images/insertion%20de%20l\'image.png',
+                        alt: 'Insertion de l\'image',
+                        caption: 'Ajout et positionnement des images illustrant l\'événement'
+                    }
+                ]
+            },
+            {
+                title: 'Publication et vérification finale',
+                images: [
+                    {
+                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/Pr%C3%A9visualisation.png',
+                        alt: 'Prévisualisation',
+                        caption: 'Prévisualisation de l\'article avant publication pour vérification'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/R%C3%A9sultat%20pr%C3%A9visualisation.png',
+                        alt: 'Résultat prévisualisation',
+                        caption: 'Vérification du rendu final de l\'article en mode prévisualisation'
+                    },
+                    {
+                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/R%C3%A9sultat%20mise%20en%20ligne%20de%20l%27article.png',
+                        alt: 'Résultat mise en ligne',
+                        caption: 'Article publié et visible sur le site web de l\'EHPAD Sainte Monique'
+                    }
+                ]
             }
         ]
     },
