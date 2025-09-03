@@ -1,4 +1,4 @@
-/* Variables de couleurs et typographie */
+﻿/* Variables de couleurs et typographie */
 /* Variables CSS pour couleurs et typographie */
 :root {
     --bleu-fonce: #0a192f;
@@ -1403,18 +1403,6 @@ html {
     border-radius: 2px;
 }
 
-.popup-details h4::before {
-    content: '📋';
-    font-size: 1.4rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.popup-competences h4::before {
-    content: '🎯';
-    font-size: 1.4rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
 #popup-tasks {
     list-style: none;
     padding: 0;
@@ -2520,8 +2508,8 @@ html {
         font-size: 0.9rem;
     }
 }
- 
- /* Styles pour le menu de s�lection des missions group�es */
+
+/* Styles pour le menu de sélection des missions groupées */
 .mission-selection-content {
     max-width: 1200px;
     margin: 0 auto;
