@@ -598,48 +598,30 @@ const missionData = {
         ]
     },
     m2l: {
-        title: 'DÉVELOPPEMENT DE LA "MAISON DES LIGUES"',
-        subtitle: 'Développement du site web "Maison des ligues"',
-        context: 'Dans le cadre de ma formation BTS SIO SISR, j\'ai été chargé de développer un site web pour la Maison des Ligues. Ce projet avait pour objectif de créer une plateforme moderne et responsive permettant de présenter les différentes ligues sportives de manière claire et attractive. Le site devait répondre aux besoins de visibilité des ligues tout en offrant une navigation intuitive aux visiteurs.',
+        title: 'DÉVELOPPEMENT DE LA "MAISON DES LIGUES" SITE WEB POUR PRÉSENTER LES DIFFÉRENTES LIGUES SPORTIVES',
+        subtitle: 'Développement de la "Maison des ligues" site web pour présenter les différentes ligues sportives',
+        context: 'Dans le cadre d\'un projet collaboratif, j\'ai participé au développement d\'un site web pour la Maison des Ligues. Ce site a pour but de présenter les différentes ligues sportives hébergées et de valoriser leurs activités auprès des visiteurs.',
         objectives: [
-            'Développer un site web vitrine pour la Maison des Ligues',
+            'Développer un site vitrine pour la Maison des Ligues',
             'Mettre en avant les différentes ligues sportives et leurs informations',
-            'Travailler en collaboration en utilisant des outils modernes (GitHub)',
+            'Travailler en collaboration avec mes camarades en utilisant GitHub',
             'Mettre le site en ligne et accessible via GitHub Pages'
         ],
         steps: [
             {
-                title: 'Organisation du projet en équipe',
+                title: 'Organisation du projet en équipe via GitHub',
                 directLink: 'https://github.com/FastAze/maison-de-ligue',
-                images: [
-                    {
-                        src: 'assets/workspace-illustration.svg',
-                        alt: 'Organisation du projet en équipe',
-                        caption: 'Mise en place de l\'organisation du travail en équipe, répartition des tâches et définition des rôles'
-                    }
-                ]
+                images: []
             },
             {
                 title: 'Développement du site',
                 directLink: 'https://docs.github.com/fr/pages',
-                images: [
-                    {
-                        src: 'assets/workspace-illustration.svg',
-                        alt: 'Développement du site web',
-                        caption: 'Phase de développement du site web avec HTML, CSS et JavaScript pour présenter les ligues sportives'
-                    }
-                ]
+                images: []
             },
             {
                 title: 'Mise en ligne du site',
-                directLink: 'https://fastaze.github.io/maison-de-ligue',
-                images: [
-                    {
-                        src: 'assets/workspace-illustration.svg',
-                        alt: 'Mise en ligne du site',
-                        caption: 'Déploiement et mise en ligne du site web via GitHub Pages pour le rendre accessible au public'
-                    }
-                ]
+                directLink: 'https://fastaze.github.io/maison-de-ligue/',
+                images: []
             }
         ]
     }
