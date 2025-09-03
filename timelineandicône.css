@@ -2520,3 +2520,97 @@ html {
         font-size: 0.9rem;
     }
 }
+ 
+ /* Styles pour le menu de s�lection des missions group�es */
+.mission-selection-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.mission-selection-content h2 {
+    font-size: 2.5rem;
+    color: var(--accent-bleu);
+    margin-bottom: 10px;
+}
+
+.selection-subtitle {
+    font-size: 1.2rem;
+    color: var(--texte-gris);
+    margin-bottom: 40px;
+}
+
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mission-card {
+    background: var(--bleu-moyen);
+    border: 1px solid var(--bleu-clair);
+    border-radius: 12px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-bleu);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+    background: var(--bleu-clair);
+}
+
+.mission-card h3 {
+    color: var(--accent-bleu);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    color: var(--texte-gris);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.view-details {
+    color: var(--accent-vert);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.back-btn {
+    background: var(--accent-bleu);
+    color: var(--bleu-fonce);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--accent-vert);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .missions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .mission-card {
+        padding: 20px;
+    }
+    
+    .mission-selection-content h2 {
+        font-size: 2rem;
+    }
+}

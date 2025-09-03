@@ -627,6 +627,75 @@ const missionData = {
     }
 };
 
+// Fonction pour ouvrir le menu de sélection des missions groupées
+function openGroupedMissions(groupKey) {
+    console.log('openGroupedMissions appelée avec:', groupKey);
+    
+    if (groupKey === 'dev-professionnel') {
+        // Masquer toutes les sections normales
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+            section.style.display = 'none';
+        });
+
+        // Créer et afficher le menu de sélection
+        showMissionSelectionMenu();
+    }
+}
+
+// Fonction pour afficher le menu de sélection des missions
+function showMissionSelectionMenu() {
+    const missions = [
+        { key: 'datasec', title: 'MISSION DATASEC', description: 'Création FileZilla Client/Server, SynBackFree' },
+        { key: 'velanne', title: 'MISSION VELANNE', description: 'FileZilla, SynBackFree, Création et configuration de vlans' },
+        { key: 'kiwi', title: 'MISSION KIWI', description: 'Ubuntu Server, DHCP, Point d\'accès Wi-Fi, Routeur' }
+    ];
+
+    const selectionHTML = `
+        <section id="mission-selection" class="section active" style="display: block;">
+            <div class="container">
+                <div class="mission-selection-content">
+                    <h2>Développement Professionnel</h2>
+                    <p class="selection-subtitle">Sélectionnez une mission pour voir les détails</p>
+                    <div class="missions-grid">
+                        ${missions.map(mission => `
+                            <div class="mission-card" onclick="openMissionDetail('${mission.key}')">
+                                <h3>${mission.title}</h3>
+                                <p>${mission.description}</p>
+                                <span class="view-details">Voir les détails →</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <button onclick="closeMissionSelection()" class="back-btn">← Retour au portfolio</button>
+                </div>
+            </div>
+        </section>
+    `;
+
+    // Injecter le HTML dans le body
+    document.body.insertAdjacentHTML('beforeend', selectionHTML);
+}
+
+// Fonction pour fermer le menu de sélection
+function closeMissionSelection() {
+    const selectionSection = document.getElementById('mission-selection');
+    if (selectionSection) {
+        selectionSection.remove();
+    }
+    
+    // Réafficher la section d'accueil
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+        section.classList.remove('active');
+    });
+    
+    const accueilSection = document.getElementById('accueil');
+    if (accueilSection) {
+        accueilSection.style.display = 'block';
+        accueilSection.classList.add('active');
+    }
+}
+
 // Fonction pour ouvrir la page de détail de mission (définition globale immédiate)
 function openMissionDetail(missionKey) {
     console.log('openMissionDetail appelée avec:', missionKey);
