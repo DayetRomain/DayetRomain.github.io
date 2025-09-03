@@ -596,6 +596,52 @@ const missionData = {
                 ]
             }
         ]
+    },
+    m2l: {
+        title: 'DÉVELOPPEMENT DE LA "MAISON DES LIGUES"',
+        subtitle: 'Développement du site web "Maison des ligues"',
+        context: 'Dans le cadre de ma formation BTS SIO SISR, j\'ai été chargé de développer un site web pour la Maison des Ligues. Ce projet avait pour objectif de créer une plateforme moderne et responsive permettant de présenter les différentes ligues sportives de manière claire et attractive. Le site devait répondre aux besoins de visibilité des ligues tout en offrant une navigation intuitive aux visiteurs.',
+        objectives: [
+            'Développer un site web vitrine pour la Maison des Ligues',
+            'Mettre en avant les différentes ligues sportives et leurs informations',
+            'Travailler en collaboration en utilisant des outils modernes (GitHub)',
+            'Mettre le site en ligne et accessible via GitHub Pages'
+        ],
+        steps: [
+            {
+                title: 'Organisation du projet en équipe',
+                directLink: 'https://github.com/FastAze/maison-de-ligue',
+                images: [
+                    {
+                        src: 'assets/workspace-illustration.svg',
+                        alt: 'Organisation du projet en équipe',
+                        caption: 'Mise en place de l\'organisation du travail en équipe, répartition des tâches et définition des rôles'
+                    }
+                ]
+            },
+            {
+                title: 'Développement du site',
+                directLink: 'https://docs.github.com/fr/pages',
+                images: [
+                    {
+                        src: 'assets/workspace-illustration.svg',
+                        alt: 'Développement du site web',
+                        caption: 'Phase de développement du site web avec HTML, CSS et JavaScript pour présenter les ligues sportives'
+                    }
+                ]
+            },
+            {
+                title: 'Mise en ligne du site',
+                directLink: 'https://fastaze.github.io/maison-de-ligue',
+                images: [
+                    {
+                        src: 'assets/workspace-illustration.svg',
+                        alt: 'Mise en ligne du site',
+                        caption: 'Déploiement et mise en ligne du site web via GitHub Pages pour le rendre accessible au public'
+                    }
+                ]
+            }
+        ]
     }
 };
 
@@ -659,9 +705,12 @@ function openMissionDetail(missionKey) {
             if (typeof step === 'object') {
                 // Étape avec images (accordéon)
                 stepDiv.innerHTML = `
-                    <div class="step-header" data-step="${stepIndex}">
-                        <span class="step-title">${step.title}</span>
-                        <i class="fas fa-chevron-down step-toggle"></i>
+                    <div class="step-header ${step.directLink ? 'step-direct-link' : ''}" data-step="${stepIndex}">
+                        <span class="step-title">
+                            ${step.title}
+                            ${step.directLink ? '<i class="fas fa-external-link-alt"></i>' : ''}
+                        </span>
+                        ${step.directLink ? '' : '<i class="fas fa-chevron-down step-toggle"></i>'}
                     </div>
                     ${step.description ? `<p class="step-description">${step.description}</p>` : ''}
                     <div class="step-content" id="step-content-${stepIndex}" style="display: none;">
@@ -682,13 +731,23 @@ function openMissionDetail(missionKey) {
                 const stepToggle = stepDiv.querySelector('.step-toggle');
                 
                 stepHeader.addEventListener('click', () => {
-                    const isVisible = stepContent.style.display !== 'none';
-                    if (isVisible) {
-                        stepContent.style.display = 'none';
-                        stepToggle.style.transform = 'rotate(0deg)';
-                    } else {
-                        stepContent.style.display = 'block';
-                        stepToggle.style.transform = 'rotate(180deg)';
+                    // Vérifier s'il y a un lien direct pour cette étape
+                    if (step.directLink) {
+                        // Rediriger directement vers le lien
+                        window.open(step.directLink, '_blank');
+                        return;
+                    }
+                    
+                    // Comportement normal de l'accordéon (seulement si pas de lien direct)
+                    if (stepContent && stepToggle) {
+                        const isVisible = stepContent.style.display !== 'none';
+                        if (isVisible) {
+                            stepContent.style.display = 'none';
+                            stepToggle.style.transform = 'rotate(0deg)';
+                        } else {
+                            stepContent.style.display = 'block';
+                            stepToggle.style.transform = 'rotate(180deg)';
+                        }
                     }
                 });
                 

@@ -1815,6 +1815,33 @@ html {
     color: var(--texte-blanc);
 }
 
+/* Styles pour les étapes avec liens directs */
+.step-direct-link {
+    position: relative;
+}
+
+.step-direct-link:hover {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: var(--accent-bleu);
+}
+
+.step-direct-link .step-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-direct-link .fa-external-link-alt {
+    color: var(--accent-bleu);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.step-direct-link:hover .fa-external-link-alt {
+    opacity: 1;
+}
+
 /* Styles pour le contenu des étapes */
 .step-content {
     transition: all 0.3s ease;
