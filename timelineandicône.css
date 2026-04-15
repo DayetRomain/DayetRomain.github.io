@@ -1047,6 +1047,13 @@ html {
     font-family: "Arial Unicode MS", sans-serif;
 }
 
+.tableau-synthese .mission-text-compact {
+    font-family: var(--font-primary);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    text-align: left;
+}
+
 /* Style pour les coches */
 .tableau-synthese td.periode,
 .tableau-synthese td.competence {

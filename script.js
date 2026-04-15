@@ -624,6 +624,34 @@ const missionData = {
                 images: []
             }
         ]
+    },
+    websecu: {
+        title: 'MISSION WEB SECU M2L',
+        subtitle: 'Mise en place d\'une infrastructure complète (Serveur WEB, DNS, Active Directory, NAGIOS)',
+        context: 'Mission d\'infrastructure pour déployer un environnement technique complet au sein du contexte M2L.',
+        objectives: [
+            'Déployer les services techniques attendus (WEB, DNS, AD, NAGIOS)',
+            'Structurer l\'infrastructure réseau et système',
+            'Valider le fonctionnement des services puis préparer les éléments de preuve'
+        ],
+        steps: [
+            {
+                title: 'Serveur WEB',
+                images: []
+            },
+            {
+                title: 'Serveur DNS',
+                images: []
+            },
+            {
+                title: 'Active Directory',
+                images: []
+            },
+            {
+                title: 'Supervision NAGIOS',
+                images: []
+            }
+        ]
     }
 };
 
