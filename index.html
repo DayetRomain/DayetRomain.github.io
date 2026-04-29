@@ -274,7 +274,7 @@
                             <td colspan="8">RÉALISATION EN COURS DE FORMATION</td>
                         </tr>
                         <tr>
-                            <td>Veille technologique</td>
+                            <td><span class="mission-title-clickable">Veille technologique</span></td>
                             <td class="periode"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
@@ -288,33 +288,33 @@
                             <td class="periode">2025</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="presence-en-ligne-m2l">✓</td>
+                            <td class="competence clickable" data-mission="m2l">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence">✓</td>
+                            <td class="competence clickable" data-mission="m2l">✓</td>
                         </tr>
                         <tr>
                             <td><span class="mission-title-clickable" onclick="openGroupedMissions('dev-professionnel')">Développement professionnel (DATASEC, VELANNE, KIWI)</span></td>
                             <td class="periode"></td>
-                            <td class="competence clickable" data-popup="gerer-patrimoine-windows">✓</td>
-                            <td class="competence clickable" data-popup="incidents-windows">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="service-windows">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence clickable" data-group="dev-professionnel">✓</td>
+                            <td class="competence clickable" data-group="dev-professionnel">✓</td>
                             <td class="competence"></td>
                         </tr>
                         <tr>
                             <td class="mission-text-compact"><span class="mission-title-clickable" onclick="openMissionDetail('websecu')">Mission WEB SECU M2L : Mise en place d'une infrastructure complète (Serveur WEB, DNS, Active Directory, NAGIOS)</span></td>
                             <td class="periode">2026</td>
-                            <td class="competence">✓</td>
+                            <td class="competence clickable" data-mission="websecu">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence">✓</td>
-                            <td class="competence">✓</td>
+                            <td class="competence clickable" data-mission="websecu">✓</td>
+                            <td class="competence clickable" data-mission="websecu">✓</td>
                             <td class="competence"></td>
                         </tr>
                         <tr>
-                            <td>Réalisation Portfolio</td>
+                            <td><span class="mission-title-clickable">Réalisation Portfolio</span></td>
                             <td class="periode"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
@@ -331,11 +331,11 @@
                         <tr>
                             <td><span class="mission-title-clickable" onclick="openMissionDetail('preparation')">PRÉPARATION DE POSTE INFORMATIQUE</span></td>
                             <td class="periode"></td>
-                            <td class="competence clickable" data-popup="gerer-patrimoine-mission1">✓</td>
-                            <td class="competence clickable" data-popup="incidents-mission1">✓</td>
+                            <td class="competence clickable" data-mission="preparation">✓</td>
+                            <td class="competence clickable" data-mission="preparation">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="service-mission1">✓</td>
+                            <td class="competence clickable" data-mission="preparation">✓</td>
                             <td class="competence"></td>
                         </tr>
                         <tr>
@@ -343,7 +343,7 @@
                             <td class="periode"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="presence-en-ligne-mission2">✓</td>
+                            <td class="competence clickable" data-mission="ehpad">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
@@ -354,24 +354,54 @@
                             <td class="competence"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="mode-projet-mission3">✓</td>
-                            <td class="competence clickable" data-popup="service-mission3">✓</td>
+                            <td class="competence clickable" data-mission="susie">✓</td>
+                            <td class="competence clickable" data-mission="susie">✓</td>
                             <td class="competence"></td>
                         </tr>
                         <tr>
                             <td><span class="mission-title-clickable" onclick="openMissionDetail('webex')">MISE À JOUR ET INTÉGRATION DES CONTACTS DES ÉTABLISSEMENTS DANS WEBEX CONTROL HUB</span></td>
                             <td class="periode"></td>
-                            <td class="competence clickable" data-popup="gerer-patrimoine-mission4">✓</td>
-                            <td class="competence clickable" data-popup="incidents-mission4">✓</td>
+                            <td class="competence clickable" data-mission="webex">✓</td>
+                            <td class="competence clickable" data-mission="webex">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-popup="service-mission4">✓</td>
-                            <td class="competence clickable" data-popup="dev-professionnel-mission4">✓</td>
+                            <td class="competence clickable" data-mission="webex">✓</td>
+                            <td class="competence clickable" data-mission="webex">✓</td>
                         </tr>
 
                         <!-- Section Réalisations en milieu professionnel deuxième année -->
                         <tr class="section-header">
                             <td colspan="8">RÉALISATIONS EN MILIEU PROFESSIONNEL EN COURS DE SECONDE ANNÉE</td>
+                        </tr>
+                        <tr>
+                            <td><span class="mission-title-clickable">RÉSOLUTION D'INCIDENTS, SUPPRESSION DE SESSIONS UTILISATEURS AUTOMATISÉES</span></td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="mission-title-clickable">CRÉATION DU SCRIPT POWERSHELL DE SUPPRESSION DE SESSIONS UTILISATEURS AUTOMATISÉES INACTIVES (&gt; 60 JOURS)</span></td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence">✓</td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="mission-title-clickable">SUIVI ADMINISTRATIF ET OPÉRATIONNEL DU DÉPLOIEMENT FLEXIBLE INTERNET DANS LE CADRE D'UN PROJET</span></td>
+                            <td class="periode"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence"></td>
+                            <td class="competence">✓</td>
+                            <td class="competence">✓</td>
+                            <td class="competence"></td>
                         </tr>
                     </tbody>
                 </table>

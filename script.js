@@ -1381,6 +1381,17 @@ const popupData = {
         ],
         skills: ['HTML5', 'CSS3', 'Design web', 'SEO', 'Tests navigateurs']
     },
+    'dev-professionnel-m2l': {
+        title: 'Développement Professionnel - Site Web M2L',
+        description: 'Mise en valeur du travail réalisé sur le projet M2L et consolidation de ma présence professionnelle à travers une réalisation publiée en ligne.',
+        tasks: [
+            'Mise en ligne du projet sur GitHub Pages',
+            'Présentation claire du parcours et des compétences',
+            'Valorisation du projet dans le portfolio',
+            'Organisation des contenus pour un usage professionnel'
+        ],
+        skills: ['GitHub Pages', 'Présentation professionnelle', 'Organisation de contenu', 'Valorisation de projet']
+    },
     'gerer-patrimoine-windows': {
         title: 'Gérer le Patrimoine - Windows Server',
         description: 'Administration et gestion d\'un environnement Windows Server incluant Active Directory, DHCP et PowerShell.',
@@ -1584,6 +1595,39 @@ const popupData = {
         description: '',
         tasks: [],
         skills: []
+    },
+    'gerer-patrimoine-websecu': {
+        title: 'Gérer le Patrimoine - Mission WEB SECU',
+        description: 'Mise en place et structuration des services techniques du projet WEB SECU, avec une attention portée aux composants à administrer et à documenter.',
+        tasks: [
+            'Identification des services et rôles serveur à déployer',
+            'Organisation des éléments techniques à suivre',
+            'Préparation des preuves de configuration',
+            'Documentation de l\'environnement mis en place'
+        ],
+        skills: ['Inventaire technique', 'Documentation', 'Administration système', 'Suivi des services']
+    },
+    'mode-projet-websecu': {
+        title: 'Travailler en Mode Projet - Mission WEB SECU',
+        description: 'Planification des étapes de la mission, coordination des tâches et suivi de la progression du projet d\'infrastructure.',
+        tasks: [
+            'Définition des étapes de réalisation',
+            'Coordination des interventions sur les services',
+            'Suivi des validations successives',
+            'Organisation des livrables et preuves'
+        ],
+        skills: ['Planification', 'Coordination', 'Suivi de projet', 'Organisation']
+    },
+    'service-websecu': {
+        title: 'Mettre à Disposition un Service - Mission WEB SECU',
+        description: 'Déploiement et validation des services WEB, DNS, Active Directory et supervision pour rendre l\'infrastructure exploitable.',
+        tasks: [
+            'Déploiement des services techniques attendus',
+            'Tests de fonctionnement et de disponibilité',
+            'Validation de l\'accès utilisateur aux services',
+            'Préparation des preuves de mise en service'
+        ],
+        skills: ['Déploiement', 'Tests', 'Validation de service', 'Mise en production']
     }
     // Ajoutez les autres données selon le même modèle...
 };
@@ -1649,13 +1693,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Ajouter les événements de clic sur les cases cliquables - DÉSACTIVÉ
-    // document.querySelectorAll('.competence.clickable').forEach(cell => {
-    //     cell.addEventListener('click', function() {
-    //         const dataKey = this.getAttribute('data-popup');
-    //         openPopup(dataKey);
-    //     });
-    // });
+    // Ajouter les événements de clic sur les cases cliquables
+    document.querySelectorAll('.competence.clickable').forEach(cell => {
+        cell.addEventListener('click', function() {
+            const missionKey = this.getAttribute('data-mission');
+            const groupKey = this.getAttribute('data-group');
+            const popupKey = this.getAttribute('data-popup');
+
+            if (missionKey && typeof window.openMissionDetail === 'function') {
+                window.openMissionDetail(missionKey);
+                return;
+            }
+
+            if (groupKey && typeof window.openGroupedMissions === 'function') {
+                window.openGroupedMissions(groupKey);
+                return;
+            }
+
+            if (popupKey) {
+                openPopup(popupKey);
+            }
+        });
+    });
 
     // Fermer la popup avec le bouton X
     closeBtn.addEventListener('click', closePopup);

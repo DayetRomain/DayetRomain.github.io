@@ -1049,9 +1049,9 @@ html {
 
 .tableau-synthese .mission-text-compact {
     font-family: var(--font-primary);
-    font-size: 0.82rem;
-    line-height: 1.35;
-    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: inherit;
 }
 
 /* Style pour les coches */
@@ -1595,6 +1595,9 @@ html {
 .mission-title-clickable {
     cursor: pointer;
     color: var(--texte-blanc);
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    line-height: 1.4;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
 }
