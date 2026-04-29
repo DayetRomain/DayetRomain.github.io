@@ -66,137 +66,22 @@ const missionData = {
         ],
         steps: [
             {
-                title: 'Gestion des utilisateurs et habilitations',
+                title: 'Analyse du besoin',
                 images: [
                     {
-                        src: 'DATASEC.img/Gestion des utilisateurs et habilitations/créationuser.png',
-                        alt: 'Création d\'un utilisateur',
-                        caption: 'Interface de création d\'un nouvel utilisateur'
-                    },
-                    {
-                        src: 'DATASEC.img/Gestion des utilisateurs et habilitations/connexionuser.png',
-                        alt: 'Connexion utilisateur',
-                        caption: 'Interface de connexion utilisateur'
+                        src: 'DATASEC.img/Analyse%20du%20besoin/contexte%20mission.png',
+                        alt: 'Contexte de la mission',
+                        caption: 'Contexte et objectifs de la mission DataSec'
                     }
                 ]
             },
             {
-                title: 'Mise en place des sauvegardes',
+                title: 'Mise en place d\'une maquette de test',
                 images: [
                     {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/configuration du profil.png',
-                        alt: 'Configuration du profil',
-                        caption: 'Configuration des paramètres de profil pour les sauvegardes'
-                    },
-                    {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/Différents types de sauvegarde.png',
-                        alt: 'Types de sauvegarde',
-                        caption: 'Aperçu des différents types de sauvegarde disponibles'
-                    },
-                    {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/test des paramètres FTP réussi.png',
-                        alt: 'Test FTP réussi',
-                        caption: 'Validation des paramètres de connexion FTP'
-                    },
-                    {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/planification sauvegarde.png',
-                        alt: 'Planification des sauvegardes',
-                        caption: 'Interface de planification automatique des sauvegardes'
-                    },
-                    {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/sauvegarde réussi.png',
-                        alt: 'Sauvegarde réussie',
-                        caption: 'Confirmation de la réussite de la sauvegarde'
-                    },
-                    {
-                        src: 'DATASEC.img/Mise en place des sauvegardes/restauration fichier côté client.png',
-                        alt: 'Restauration côté client',
-                        caption: 'Interface de restauration des fichiers côté client'
-                    }
-                ]
-            },
-            {
-                title: 'Vérification de la continuité du service',
-                images: [
-                    {
-                        src: 'DATASEC.img/Vérification de la continuité du service/test de connexion user vers Server FTP.png',
-                        alt: 'Test de connexion FTP',
-                        caption: 'Test de connexion utilisateur vers le serveur FTP'
-                    },
-                    {
-                        src: 'DATASEC.img/Vérification de la continuité du service/restauration réussi.png',
-                        alt: 'Restauration réussie',
-                        caption: 'Confirmation de la réussite de la restauration'
-                    },
-                    {
-                        src: 'DATASEC.img/Vérification de la continuité du service/fichiers restaurés.png',
-                        alt: 'Fichiers restaurés',
-                        caption: 'Affichage des fichiers après restauration réussie'
-                    }
-                ]
-            },
-            {
-                title: 'Configuration réseau',
-                images: [
-                    {
-                        src: 'DATASEC.img/Configuration réseau/configuration IPV4 manuelle.png',
-                        alt: 'Configuration IPv4 manuelle',
-                        caption: 'Configuration manuelle des paramètres IPv4 du réseau'
-                    }
-                ]
-            },
-            {
-                title: 'Déploiement du service',
-                images: [
-                    {
-                        src: 'DATASEC.img/Déploiement du service/interface connexion server FTP.png',
-                        alt: 'Interface de connexion serveur FTP',
-                        caption: 'Interface de connexion au serveur FTP'
-                    },
-                    {
-                        src: 'DATASEC.img/Déploiement du service/connexion réussi au server FTP.png',
-                        alt: 'Connexion réussie au serveur FTP',
-                        caption: 'Confirmation de la connexion réussie au serveur FTP'
-                    },
-                    {
-                        src: 'DATASEC.img/Déploiement du service/configuration mdp et port server FTP.png',
-                        alt: 'Configuration mot de passe et port FTP',
-                        caption: 'Configuration des paramètres de mot de passe et port du serveur FTP'
-                    }
-                ]
-            },
-            {
-                title: 'Accompagnement des utilisateurs',
-                images: [
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/connexion avec identifiants.png',
-                        alt: 'Connexion avec identifiants',
-                        caption: 'Guide de connexion utilisateur avec identifiants'
-                    },
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/configuration du profil.png',
-                        alt: 'Configuration du profil utilisateur',
-                        caption: 'Aide à la configuration du profil utilisateur'
-                    },
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/test des paramètres FTP réussi.png',
-                        alt: 'Test des paramètres FTP',
-                        caption: 'Validation des paramètres FTP avec l\'utilisateur'
-                    },
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/planification sauvegarde.png',
-                        alt: 'Planification des sauvegardes',
-                        caption: 'Formation à la planification automatique des sauvegardes'
-                    },
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/restauration.png',
-                        alt: 'Processus de restauration',
-                        caption: 'Guide du processus de restauration pour les utilisateurs'
-                    },
-                    {
-                        src: 'DATASEC.img/Accompagnement des utilisateurs/restauration fichier côté client.png',
-                        alt: 'Restauration côté client',
-                        caption: 'Accompagnement pour la restauration de fichiers côté client'
+                        src: 'DATASEC.img/mise%20en%20place%20d%E2%80%99une%20maquette%20de%20test/Maquette%20de%20la%20mission.png',
+                        alt: 'Maquette de la mission',
+                        caption: 'Maquette de test pour la mission DataSec'
                     }
                 ]
             }
