@@ -1247,6 +1247,11 @@ html {
     background: linear-gradient(45deg, rgba(100, 255, 218, 0.1), rgba(74, 255, 233, 0.1));
 }
 
+.tableau-synthese .competence.checked {
+    border-radius: 6px;
+    background: linear-gradient(45deg, rgba(100, 255, 218, 0.1), rgba(74, 255, 233, 0.1));
+}
+
 .tableau-synthese .competence.clickable:hover {
     background: linear-gradient(45deg, rgba(100, 255, 218, 0.3), rgba(74, 255, 233, 0.3));
     transform: scale(1.05);

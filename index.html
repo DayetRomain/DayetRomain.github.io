@@ -23,7 +23,7 @@
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#profil">Profil</a></li>
-            <li><a href="#situation">Situation Professionnelle</a></li>
+            <li><a href="#situation">Mes situations Professionnelles</a></li>
             <li><a href="#tableau-competences">Tableau de Compétences</a></li>
             <li><a href="#veille">Veille</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -150,15 +150,35 @@
         </div>
     </section>
 
-    <!-- Section Situation Professionnelle -->
+    <!-- Section Mes Situations Professionnelles -->
     <section id="situation" class="section">
         <div class="container">
-            <h2>Situation Professionnelle</h2>
+            <h2>Mes situations Professionnelles</h2>
             <div class="projets-grid">
-                <!-- Projet Maison des ligues -->
+                <!-- ANRAS - Stage première année -->
                 <div class="projet-card">
-                    <h3>Maison des ligues</h3>
-                    <p>Site web développé pour la Maison des Ligues. Présentation détaillée des différentes ligues sportives.</p>
+                    <h3>ANRAS – Stage Première Année</h3>
+                    <p>Lors de ce stage, j’ai réalisé des missions de support informatique et d’administration système, notamment la préparation de postes, la gestion d’incidents utilisateurs et l’assistance à distance. J’ai également contribué à la mise à jour de contenus web et au suivi d’un projet de déploiement réseau, ainsi qu’à la gestion de données dans Webex.</p>
+                    <p class="technologies"><strong>Technologies :</strong> Windows, Microsoft 365, SharePoint, Outlook, Excel, Teams, Webex, AnyDesk, K-Sup (CMS), OneDrive</p>
+                    <div class="projet-buttons">
+                        <a href="./assets/Rapport_Stage_Romain_Dayet_ANRAS_v2.pdf" target="_blank" class="btn-projet">Rapport de stage 1ère année</a>
+                    </div>
+                </div>
+
+                <!-- ANRAS - Stage Deuxième Année -->
+                <div class="projet-card">
+                    <h3>ANRAS – Stage Deuxième Année</h3>
+                    <p>Lors de ce stage, j’ai réalisé des missions de support informatique en intervenant à distance pour résoudre des incidents liés à l’espace disque, notamment par la suppression de profils utilisateurs. J’ai également développé un script PowerShell pour automatiser cette tâche, puis participé au suivi d’un projet de déploiement réseau en analysant et structurant des données.</p>
+                    <p class="technologies"><strong>Technologies :</strong> PowerShell, Windows, AnyDesk, Webex, Microsoft 365, Excel, SharePoint, Teams, Outlook</p>
+                    <div class="projet-buttons">
+                        <a href="./assets/Rapport_Stage_Romain_Dayet_ANRAS deuxième année v2.pdf" target="_blank" class="btn-projet">Rapport de stage 2ème année</a>
+                    </div>
+                </div>
+
+                <!-- Mission AP - Site web première année -->
+                <div class="projet-card">
+                    <h3>Mission AP – Site Web Première Année</h3>
+                    <p>Développement d’un site web vitrine pour la Maison des Ligues de Lorraine afin de présenter les ligues sportives et leurs activités. Le projet a été réalisé en équipe avec une gestion collaborative du code via GitHub, puis mis en ligne avec GitHub Pages. L’objectif était de créer un service accessible en ligne améliorant la visibilité de l’organisation.</p>
                     <p class="technologies"><strong>Technologies :</strong> HTML, CSS, GitHub Pages</p>
                     <div class="projet-buttons">
                         <a href="https://github.com/FastAze/maison-de-ligue" target="_blank" class="btn-projet">Voir le GitHub</a>
@@ -168,20 +188,9 @@
 
                 <!-- Projet Missions atelier professionalisation -->
                 <div class="projet-card">
-                    <h3>Missions Atelier Professionalisation</h3>
+                    <h3>Mission AP - Première et Deuxième Année</h3>
                     <p>Missions d'atelier couvrant un projet réseau complet pour la Maison des Ligues : déploiement d'une infrastructure Wi-Fi sécurisée avec DHCP et redondance Internet (HSRP), segmentation du réseau en VLANs par ligue avec routage inter-VLAN, sauvegarde automatisée sur serveur FTP, ainsi que la mise en place de services DNS redondés, d'un serveur web, d'un Active Directory et d'une supervision Nagios.</p>
                     <p class="technologies"><strong>Technologies :</strong> Réseau, Systèmes, Cybersécurité, Supervision</p>
-                </div>
-
-                <!-- Projet Stages ANRAS -->
-                <div class="projet-card">
-                    <h3>Stages ANRAS</h3>
-                    <p>Documentation et rapports de mes stages effectués dans le cadre de ma formation BTS SIO SISR.</p>
-                    <p class="technologies"><strong>Technologies :</strong> Documentation, Rapports de stage</p>
-                    <div class="projet-buttons">
-                        <a href="./assets/Rapport_Stage_Romain_Dayet_ANRAS_v2.pdf" target="_blank" class="btn-projet">Rapport de stage 1ère année</a>
-                        <a href="./assets/Rapport_Stage_Romain_Dayet_ANRAS deuxième année v2.pdf" target="_blank" class="btn-projet">Rapport de stage 2ème année</a>
-                    </div>
                 </div>
 
                 <!-- Projet Portfolio -->
@@ -332,10 +341,10 @@
                             <td><span class="mission-title-clickable" onclick="openMissionDetail('preparation')">PRÉPARATION DE POSTE INFORMATIQUE</span></td>
                             <td class="periode"></td>
                             <td class="competence clickable" data-mission="preparation">✓</td>
-                            <td class="competence clickable" data-mission="preparation">✓</td>
+                            <td class="competence checked">✓</td>
                             <td class="competence"></td>
                             <td class="competence"></td>
-                            <td class="competence clickable" data-mission="preparation">✓</td>
+                            <td class="competence"></td>
                             <td class="competence"></td>
                         </tr>
                         <tr>
@@ -349,13 +358,13 @@
                             <td class="competence"></td>
                         </tr>
                         <tr>
-                            <td><span class="mission-title-clickable" onclick="openMissionDetail('susie')">MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET SUSIE</span></td>
+                            <td><span class="mission-title-clickable" onclick="openMissionDetail('susie')">MISE EN ŒUVRE DE LA FIBRE OPTIQUE FTTH DANS LE CADRE DU PROJET</span></td>
                             <td class="periode"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
                             <td class="competence"></td>
                             <td class="competence clickable" data-mission="susie">✓</td>
-                            <td class="competence clickable" data-mission="susie">✓</td>
+                            <td class="competence"></td>
                             <td class="competence"></td>
                         </tr>
                         <tr>

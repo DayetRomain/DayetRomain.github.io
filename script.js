@@ -228,72 +228,27 @@ const missionData = {
         ],
         steps: [
             {
-                title: 'Installation et configuration système',
+                title: 'Renommage du poste selon la nomenclature ANRAS',
                 images: [
                     {
-                        src: 'Pr%C3%A9parationdeposte.img/Installation et configuration syst%C3%A8me/Installation Windows 11.png',
-                        alt: 'Installation Windows 11',
-                        caption: 'Installation du système d\'exploitation Windows 11 sur le poste de travail'
+                        src: 'Pr%C3%A9parationdeposte.img/Renommage%20du%20poste%20selon%20la%20nomenclature%20ANRAS/Nom%20du%20poste%20en%20cours%20de%20renommage.png',
+                        alt: 'Nom du poste en cours de renommage',
+                        caption: 'Renommage du poste selon la nomenclature ANRAS'
                     },
                     {
-                        src: 'Pr%C3%A9parationdeposte.img/Installation et configuration syst%C3%A8me/renommage du poste.png',
-                        alt: 'Renommage du poste',
-                        caption: 'Configuration du nom du poste selon les standards ANRAS'
+                        src: 'Pr%C3%A9parationdeposte.img/Renommage%20du%20poste%20selon%20la%20nomenclature%20ANRAS/V%C3%A9rification%20apr%C3%A8s%20renommage%20dans%20Portail%20Captif%20Entreprise%20Microsoft.png',
+                        alt: 'Vérification après renommage dans Portail Captif Entreprise Microsoft',
+                        caption: 'Vérification du renommage dans le portail captif Entreprise Microsoft'
                     }
                 ]
             },
             {
-                title: 'Sécurisation et mises à jour',
+                title: 'BitLocker activé avec sauvegarde Azure AD',
                 images: [
                     {
-                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/activation TPM et Secure Boot, antivirus Windows Defender activ%C3%A9.png',
-                        alt: 'Activation TPM et Secure Boot, antivirus Windows Defender activé',
-                        caption: 'Activation des fonctionnalités de sécurité TPM, Secure Boot et Windows Defender'
-                    },
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/application des mises %C3%A0 jour.png',
-                        alt: 'Application des mises à jour',
-                        caption: 'Installation des dernières mises à jour de sécurité Windows'
-                    },
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/S%C3%A9curisation et mises %C3%A0 jour/Chiffrement Bitlocker.png',
-                        alt: 'Chiffrement BitLocker',
-                        caption: 'Configuration et activation du chiffrement BitLocker pour sécuriser les données'
-                    }
-                ]
-            },
-            {
-                title: 'Mises à jour matérielles',
-                images: [
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/Mises %C3%A0 jour mat%C3%A9rielles/V%C3%A9rification des mises %C3%A0 jour.png',
-                        alt: 'Vérification des mises à jour',
-                        caption: 'Vérification et recherche des mises à jour matérielles disponibles'
-                    },
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/Mises %C3%A0 jour mat%C3%A9rielles/application des mises %C3%A0 jour.png',
-                        alt: 'Application des mises à jour matérielles',
-                        caption: 'Installation des pilotes et mises à jour matérielles nécessaires'
-                    }
-                ]
-            },
-            {
-                title: 'Installation des logiciels métiers',
-                images: [
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/Installation de edge et office.png',
-                        alt: 'Installation de Edge et Office',
-                        caption: 'Installation des logiciels Microsoft Edge et Office pour les besoins métiers'
-                    },
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/Sharepoint.png',
-                        alt: 'Configuration SharePoint',
-                        caption: 'Configuration et accès à la plateforme SharePoint de l\'organisation'
-                    },
-                    {
-                        src: 'Pr%C3%A9parationdeposte.img/Installation des logiciels m%C3%A9tiers/synchronisation du SharePoint.png',
-                        alt: 'Synchronisation SharePoint',
-                        caption: 'Configuration de la synchronisation automatique avec SharePoint'
+                        src: 'Pr%C3%A9parationdeposte.img/BitLocker%20activ%C3%A9%20avec%20sauvegarde%20Azure%20AD/Enregistrement%20Azure%20AD%20et%20chiffrement%20Bitlocker%20activ%C3%A9.png',
+                        alt: 'Enregistrement Azure AD et chiffrement Bitlocker activé',
+                        caption: 'Activation de BitLocker avec sauvegarde dans Azure AD'
                     }
                 ]
             }
@@ -309,72 +264,32 @@ const missionData = {
         ],
         steps: [
             {
-                title: 'Connexion à l\'interface K-Sup',
+                title: 'Séquence création article sur K-Sup avant vérification sur site public',
                 images: [
                     {
-                        src: 'Miseenlignearticle.img/Connexion%20%C3%A0%20l\'interface%20K-Sup/connexion%20%C3%A0%20interface%20en%20admin.png',
-                        alt: 'Connexion à interface en admin',
-                        caption: 'Interface de connexion administrateur à la plateforme K-Sup'
+                        src: 'Miseenlignearticle.img/S%C3%A9quence%20Cr%C3%A9ation%20article%20sur%20K-Sup%20avant%20v%C3%A9rification%20sur%20site%20public/Arborescence%20de%20s%C3%A9lection%20de%20rubrique.png',
+                        alt: 'Arborescence de sélection de rubrique',
+                        caption: 'Arborescence de sélection de rubrique dans K-Sup'
                     },
                     {
-                        src: 'Miseenlignearticle.img/Connexion%20%C3%A0%20l\'interface%20K-Sup/R%C3%A9sulat%20connexion%20admin.png',
-                        alt: 'Résultat connexion admin',
-                        caption: 'Confirmation de la connexion réussie en tant qu\'administrateur'
+                        src: 'Miseenlignearticle.img/S%C3%A9quence%20Cr%C3%A9ation%20article%20sur%20K-Sup%20avant%20v%C3%A9rification%20sur%20site%20public/Cr%C3%A9ation%20de%20la%20liste%20des%20fiches%20K-Sup.png',
+                        alt: 'Création de la liste des fiches K-Sup',
+                        caption: 'Création de la liste des fiches dans K-Sup'
                     }
                 ]
             },
             {
-                title: 'Création de la fiche article',
+                title: 'Vérification mise en ligne sur site public',
                 images: [
                     {
-                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/Choix%20de%20rubrique.png',
-                        alt: 'Choix de rubrique',
-                        caption: 'Sélection de la rubrique appropriée pour l\'article EHPAD Sainte Monique'
+                        src: 'Miseenlignearticle.img/V%C3%A9rification%20Mise%20en%20ligne%20sur%20Site%20public/Mise%20en%20ligne%20de%20l%27article.png',
+                        alt: 'Mise en ligne de l\'article',
+                        caption: 'Mise en ligne de l\'article sur le site public'
                     },
                     {
-                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/cr%C3%A9ation%20de%20la%20fiche.png',
-                        alt: 'Création de la fiche',
-                        caption: 'Interface de création de la fiche article dans le système K-Sup'
-                    },
-                    {
-                        src: 'Miseenlignearticle.img/Cr%C3%A9ation%20de%20la%20fiche%20article/Rattachement%20%C3%A0%20la%20strucure.png',
-                        alt: 'Rattachement à la structure',
-                        caption: 'Configuration du rattachement de l\'article à la structure EHPAD'
-                    }
-                ]
-            },
-            {
-                title: 'Rédaction et ajout d\'images',
-                images: [
-                    {
-                        src: 'Miseenlignearticle.img/R%C3%A9daction%20et%20ajout%20images/insertion%20du%20texte.png',
-                        alt: 'Insertion du texte',
-                        caption: 'Rédaction et insertion du contenu textuel de l\'article'
-                    },
-                    {
-                        src: 'Miseenlignearticle.img/R%C3%A9daction%20et%20ajout%20images/insertion%20de%20l\'image.png',
-                        alt: 'Insertion de l\'image',
-                        caption: 'Ajout et positionnement des images illustrant l\'événement'
-                    }
-                ]
-            },
-            {
-                title: 'Publication et vérification finale',
-                images: [
-                    {
-                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/Pr%C3%A9visualisation.png',
-                        alt: 'Prévisualisation',
-                        caption: 'Prévisualisation de l\'article avant publication pour vérification'
-                    },
-                    {
-                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/R%C3%A9sultat%20pr%C3%A9visualisation.png',
-                        alt: 'Résultat prévisualisation',
-                        caption: 'Vérification du rendu final de l\'article en mode prévisualisation'
-                    },
-                    {
-                        src: 'Miseenlignearticle.img/Publication%20et%20v%C3%A9rification%20finale/R%C3%A9sultat%20mise%20en%20ligne%20de%20l%27article.png',
-                        alt: 'Résultat mise en ligne',
-                        caption: 'Article publié et visible sur le site web de l\'EHPAD Sainte Monique'
+                        src: 'Miseenlignearticle.img/V%C3%A9rification%20Mise%20en%20ligne%20sur%20Site%20public/Visualisation%20de%20l\'article%20sur%20site%20public.png',
+                        alt: 'Visualisation de l\'article sur site public',
+                        caption: 'Vérification de l\'article sur le site public'
                     }
                 ]
             }
