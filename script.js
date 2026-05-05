@@ -222,9 +222,8 @@ const missionData = {
         subtitle: 'Mission 1 : Préparation de poste informatique',
         context: 'Préparer des postes pour qu\'ils soient conformes aux standards ANRAS.',
         objectives: [
-            'Standardisation des postes',
-            'Sécurité (BitLocker, mises à jour, antivirus)',
-            'Compatibilité avec logiciels métiers'
+            'Appliquer la nomenclature ANRAS sur le poste',
+            'Sécuriser le poste avec BitLocker et sauvegarde Azure AD'
         ],
         steps: [
             {
@@ -259,8 +258,8 @@ const missionData = {
         subtitle: 'Mise en ligne d\'un article – EHPAD Sainte Monique',
         context: 'Publication d\'un article institutionnel pour valoriser les actions de l\'EHPAD.',
         objectives: [
-            'Renforcer la visibilité numérique',
-            'Valoriser un événement avec des partenaires'
+            'Créer et structurer l\'article dans K-Sup',
+            'Vérifier la publication sur le site public'
         ],
         steps: [
             {
@@ -300,42 +299,37 @@ const missionData = {
         subtitle: 'Mission 3 : Mise en œuvre fibre optique FTTH – Projet SUSIE',
         context: 'Participation au projet SUSIE pour moderniser le réseau.',
         objectives: [
-            'Déploiement fibre optique',
-            'Suivi administratif via SharePoint'
+            'Mettre à jour le tableau de suivi du projet',
+            'Documenter la mise en service de la fibre (PV Orange)'
         ],
         steps: [
             {
-                title: 'Préparation et envoi des mails aux établissements',
+                title: 'Tableau de suivi Excel Projet SUSIE avant et après mise à jour',
                 images: [
                     {
-                        src: 'fibreoptique.img/Pr%C3%A9paration%20et%20envoi%20des%20mails/Pr%C3%A9paration%20et%20envoi%20des%20mails.png',
-                        alt: 'Préparation et envoi des mails',
-                        caption: 'Processus de préparation et d\'envoi des communications aux établissements pour le projet SUSIE'
-                    }
-                ]
-            },
-            {
-                title: 'Mise à jour du tableau de suivi administratif',
-                images: [
-                    {
-                        src: 'fibreoptique.img/Mise%20%C3%A0%20jour%20du%20suivi%20administratif/Suivi%20pas%20mis%20%C3%A0%20jour.png',
-                        alt: 'Suivi pas mis à jour',
-                        caption: 'État initial du tableau de suivi administratif avant mise à jour'
+                        src: 'fibreoptique.img/Tableau%20de%20suivi%20Excel%20Projet%20SUSIE%20avant%20et%20apr%C3%A8s%20mise%20%C3%A0%20jour/Suivi%20non%20mis%20%C3%A0%20jour.png',
+                        alt: 'Suivi non mis à jour',
+                        caption: 'Tableau de suivi Excel avant mise à jour'
                     },
                     {
-                        src: 'fibreoptique.img/Mise%20%C3%A0%20jour%20du%20suivi%20administratif/Suivi%20mis%20%C3%A0%20jour.png',
+                        src: 'fibreoptique.img/Tableau%20de%20suivi%20Excel%20Projet%20SUSIE%20avant%20et%20apr%C3%A8s%20mise%20%C3%A0%20jour/Suivi%20mis%20%C3%A0%20jour.png',
                         alt: 'Suivi mis à jour',
-                        caption: 'Tableau de suivi administratif après mise à jour avec les nouvelles données'
+                        caption: 'Tableau de suivi Excel après mise à jour'
                     }
                 ]
             },
             {
-                title: 'Coordination avec les techniciens et Orange',
+                title: 'Procès Verbal de Mise en Service Orange (fibre active)',
                 images: [
                     {
-                        src: 'fibreoptique.img/Coordination%20avec%20techniciens%20Orange/Mise%20en%20place%20de%20la%20fibre%20optique.png',
-                        alt: 'Mise en place de la fibre optique',
-                        caption: 'Coordination opérationnelle pour la mise en place de la fibre optique avec les équipes Orange'
+                        src: 'fibreoptique.img/Proc%C3%A8s%20Verbal%20de%20Mise%20en%20Service%20Orange%20%28fibre%20active%29/Proc%C3%A8s%20de%20mise%20en%20service%20de%20la%20fibre%20optique%20par%20ORANGE.png',
+                        alt: 'Procès de mise en service de la fibre optique par ORANGE',
+                        caption: 'Procès-verbal de mise en service de la fibre optique (page 1)'
+                    },
+                    {
+                        src: 'fibreoptique.img/Proc%C3%A8s%20Verbal%20de%20Mise%20en%20Service%20Orange%20%28fibre%20active%29/Deuxi%C3%A8me%20partie%20Proc%C3%A8s%20de%20mise%20en%20service%20de%20la%20fibre%20optique%20par%20ORANGE.png',
+                        alt: 'Deuxième partie Procès de mise en service de la fibre optique par ORANGE',
+                        caption: 'Procès-verbal de mise en service de la fibre optique (page 2)'
                     }
                 ]
             }
@@ -346,42 +340,33 @@ const missionData = {
         subtitle: 'Mise à jour & intégration des contacts – Webex Control Hub',
         context: 'Mise à jour et centralisation des contacts établissements dans Webex.',
         objectives: [
-            'Structurer un fichier CSV conforme',
-            'Importation automatisée dans Webex'
+            'Structurer les données et le fichier CSV',
+            'Diagnostiquer l\'incident d\'importation',
+            'Valider l\'importation dans Webex Control Hub'
         ],
         steps: [
             {
-                title: 'Collecte et structuration des données',
+                title: 'Préparation et structuration des données',
                 images: [
                     {
-                        src: 'int%C3%A9grationsdescontacts.img/Collecte%20et%20structuration%20des%20donn%C3%A9es/croisement%20des%20informations.png',
-                        alt: 'Croisement des informations',
-                        caption: 'Processus de croisement et de vérification des informations de contact'
+                        src: 'int%C3%A9grationsdescontacts.img/pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es/Collecte%20des%20informations.png',
+                        alt: 'Collecte des informations',
+                        caption: 'Collecte des informations avant structuration'
                     },
                     {
-                        src: 'int%C3%A9grationsdescontacts.img/Collecte%20et%20structuration%20des%20donn%C3%A9es/fichier%20CSV.png',
-                        alt: 'Fichier CSV',
-                        caption: 'Structure et organisation des données dans le fichier CSV'
+                        src: 'int%C3%A9grationsdescontacts.img/pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es/Ficher%20CSV%20pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es.png',
+                        alt: 'Fichier CSV préparation et structuration des données',
+                        caption: 'Structuration des données dans le fichier CSV'
                     }
                 ]
             },
             {
-                title: 'Préparation fichier CSV (UTF-8, séparateurs)',
+                title: 'Incident et diagnostic depuis Console Webex Control Hub',
                 images: [
                     {
-                        src: 'int%C3%A9grationsdescontacts.img/Pr%C3%A9paration%20fichier%20CSV%20%28UTF-8%2C%20s%C3%A9parateurs%29/fichier%20CSV.png',
-                        alt: 'Fichier CSV préparé',
-                        caption: 'Fichier CSV final avec encodage UTF-8 et séparateurs corrects'
-                    }
-                ]
-            },
-            {
-                title: 'Analyse et correction des erreurs',
-                images: [
-                    {
-                        src: 'int%C3%A9grationsdescontacts.img/Analyse%20et%20correction%20des%20erreurs/erreur%20premi%C3%A8re%20importation.png',
-                        alt: 'Erreur première importation',
-                        caption: 'Analyse des erreurs rencontrées lors de la première tentative d\'importation'
+                        src: 'int%C3%A9grationsdescontacts.img/Incident%20et%20diagnostic%20depuis%20Console%20webex%20Control%20HUB/Erreur%20apr%C3%A8s%20Premi%C3%A8re%20importation%20de%20la%20liste%20de%20contact%20CSV.png',
+                        alt: 'Erreur après première importation de la liste de contact CSV',
+                        caption: 'Incident détecté lors de l\'importation dans Webex Control Hub'
                     }
                 ]
             },
@@ -389,9 +374,9 @@ const missionData = {
                 title: 'Importation réussie dans Webex',
                 images: [
                     {
-                        src: 'int%C3%A9grationsdescontacts.img/Importation%20r%C3%A9ussie%20dans%20Webex/importation%20r%C3%A9ussi.png',
-                        alt: 'Importation réussie',
-                        caption: 'Confirmation de l\'importation réussie des contacts dans Webex Control Hub'
+                        src: 'int%C3%A9grationsdescontacts.img/Importation%20r%C3%A9ussie%20dans%20Webex/R%C3%A9solution%20importation%20de%20la%20liste%20des%20contacts.png',
+                        alt: 'Résolution importation de la liste des contacts',
+                        caption: 'Importation réussie après correction'
                     }
                 ]
             }
