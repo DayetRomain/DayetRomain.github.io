@@ -1598,19 +1598,13 @@ html {
 
 /* Styles pour les titres de mission cliquables */
 .mission-title-clickable {
-    cursor: pointer;
+    cursor: default;
     color: var(--texte-blanc);
     font-family: var(--font-primary);
     font-size: 0.9rem;
     line-height: 1.4;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
-}
-
-.mission-title-clickable:hover {
-    color: var(--accent-bleu);
-    border-bottom: 2px solid var(--accent-bleu);
-    text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
 }
 
 /* Styles pour la section de détail de mission */

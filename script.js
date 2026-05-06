@@ -383,7 +383,7 @@ const missionData = {
         ]
     },
     supressionsession: {
-        title: 'RÉSOLUTION D\'INCIDENTS, SUPPRESSION DE SESSIONS UTILISATEURS MANUELLE ET AUTOMATISÉES',
+        title: 'RÉSOLUTION D\'INCIDENTS, SUPPRESSION DE SESSIONS UTILISATEURS MANUELLE',
         subtitle: 'Résolution d\'incidents et suppression de sessions utilisateurs',
         context: 'Traitement d\'incidents liés à l\'espace disque et nettoyage de profils utilisateurs pour rétablir un service stable.',
         objectives: [
@@ -419,6 +419,90 @@ const missionData = {
                         src: 'supressionsession.img/L%27avantapr%C3%A8s%20espace%20disque%20lib%C3%A9r%C3%A9/Apr%C3%A8s%20suppression%20utilisateur.png',
                         alt: 'Après suppression utilisateur',
                         caption: 'Espace disque libéré après suppression'
+                    }
+                ]
+            }
+        ]
+    },
+    creationscript: {
+        title: 'CRÉATION DU SCRIPT POWERSHELL DE SUPPRESSION DE SESSIONS UTILISATEURS AUTOMATISÉES INACTIVES (> 60 JOURS)',
+        subtitle: 'Création du script PowerShell de suppression de sessions inactives',
+        context: 'Automatisation de la suppression des sessions utilisateurs inactives pour libérer l\'espace disque et fiabiliser les interventions.',
+        objectives: [
+            'Identifier les sessions inactives à traiter',
+            'Automatiser la suppression avec un script PowerShell',
+            'Valider le bon fonctionnement sur un poste de formation'
+        ],
+        steps: [
+            {
+                title: 'Mécanisme de gestion d\'erreurs',
+                images: [
+                    {
+                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/Date%20utilisateur%20vide.png',
+                        alt: 'Date utilisateur vide',
+                        caption: 'Gestion du cas où la date utilisateur est vide'
+                    },
+                    {
+                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/Erreur%20affichage%20Date%20Utilisateur.png',
+                        alt: 'Erreur affichage date utilisateur',
+                        caption: 'Affichage d\'erreur pour une date utilisateur invalide'
+                    },
+                    {
+                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/R%C3%A9solution%20pour%20assurer%20une%20bonne%20exploitation%20d%27une%20date.png',
+                        alt: 'Résolution pour exploitation de date',
+                        caption: 'Correction pour assurer l\'exploitation correcte de la date'
+                    }
+                ]
+            },
+            {
+                title: 'Résultat final d\'exécution du script sur le poste de formation',
+                images: [
+                    {
+                        src: 'cr%C3%A9ationscript.img/R%C3%A9sultat%20final%20d%27ex%C3%A9cution%20du%20script%20sur%20le%20poste%20de%20formation/R%C3%A9sultat%20final%20d%27ex%C3%A9cution%20du%20script.png',
+                        alt: 'Résultat final d\'exécution du script',
+                        caption: 'Exécution réussie du script sur le poste de formation'
+                    }
+                ]
+            }
+        ]
+    },
+    suiviprojetsusie: {
+        title: 'SUIVI ADMINISTRATIF ET OPÉRATIONNEL DU DÉPLOIEMENT FLEXIBLE INTERNET DANS LE CADRE D\'UN PROJET',
+        subtitle: 'Suivi administratif et opérationnel du projet Flexible Internet',
+        context: 'Suivi du projet Flexible Internet avec centralisation des informations, analyse des échanges et mise à jour des tableaux de pilotage.',
+        objectives: [
+            'Centraliser les informations projet dans un fichier de synthèse',
+            'Analyser les échanges pour consolider le suivi',
+            'Mettre à jour le tableau SharePoint du projet'
+        ],
+        steps: [
+            {
+                title: 'Fichier Excel de synthèse et les mails analysés',
+                images: [
+                    {
+                        src: 'SuiviprojetSusie.img/Fichier%20Excel%20de%20synth%C3%A8se%20et%20les%20mails%20analys%C3%A9s/Centralisation%20des%20informations%20collect%C3%A9es%20dans%20un%20fichier%20de%20synth%C3%A8se.png',
+                        alt: 'Centralisation des informations dans un fichier de synthèse',
+                        caption: 'Centralisation des informations collectées dans un fichier de synthèse'
+                    },
+                    {
+                        src: 'SuiviprojetSusie.img/Fichier%20Excel%20de%20synth%C3%A8se%20et%20les%20mails%20analys%C3%A9s/%C3%A9change%20des%20mails%20analys%C3%A9s%20pour%20exploitation%20des%20informations.png',
+                        alt: 'Échange des mails analysés',
+                        caption: 'Échanges de mails analysés pour exploiter les informations'
+                    }
+                ]
+            },
+            {
+                title: 'Tableau SharePoint Projet Susie avant/après mise à jour',
+                images: [
+                    {
+                        src: 'SuiviprojetSusie.img/ableau%20SharePoint%20Projet%20Susie%20avantapr%C3%A8s%20mise%20%C3%A0%20jour/Mise%20%C3%A0%20jour%20du%20tableau%20avant.png',
+                        alt: 'Mise à jour du tableau avant',
+                        caption: 'Tableau SharePoint avant mise à jour'
+                    },
+                    {
+                        src: 'SuiviprojetSusie.img/ableau%20SharePoint%20Projet%20Susie%20avantapr%C3%A8s%20mise%20%C3%A0%20jour/Mise%20%C3%A0%20jour%20du%20tableau%20compl%C3%A8te.png',
+                        alt: 'Mise à jour du tableau complète',
+                        caption: 'Tableau SharePoint après mise à jour'
                     }
                 ]
             }
