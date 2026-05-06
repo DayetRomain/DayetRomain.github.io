@@ -382,6 +382,48 @@ const missionData = {
             }
         ]
     },
+    supressionsession: {
+        title: 'RÉSOLUTION D\'INCIDENTS, SUPPRESSION DE SESSIONS UTILISATEURS MANUELLE ET AUTOMATISÉES',
+        subtitle: 'Résolution d\'incidents et suppression de sessions utilisateurs',
+        context: 'Traitement d\'incidents liés à l\'espace disque et nettoyage de profils utilisateurs pour rétablir un service stable.',
+        objectives: [
+            'Identifier la demande via le ticket et les preuves du hub',
+            'Libérer l\'espace disque en supprimant les sessions inutiles',
+            'Vérifier l\'amélioration après intervention'
+        ],
+        steps: [
+            {
+                title: 'Ticket et preuves depuis le hub',
+                images: [
+                    {
+                        src: 'supressionsession.img/ticket%20preuve%20hub/affichage%20ticket.png',
+                        alt: 'Affichage du ticket',
+                        caption: 'Ticket d\'incident associé à la demande'
+                    },
+                    {
+                        src: 'supressionsession.img/ticket%20preuve%20hub/Trace%20de%20l%27appel.png',
+                        alt: 'Trace de l\'appel',
+                        caption: 'Preuve de l\'appel depuis le hub'
+                    }
+                ]
+            },
+            {
+                title: 'Avant / après : espace disque libéré',
+                images: [
+                    {
+                        src: 'supressionsession.img/L%27avantapr%C3%A8s%20espace%20disque%20lib%C3%A9r%C3%A9/avant%20suppression%20session.png',
+                        alt: 'Avant suppression de session',
+                        caption: 'Espace disque avant suppression'
+                    },
+                    {
+                        src: 'supressionsession.img/L%27avantapr%C3%A8s%20espace%20disque%20lib%C3%A9r%C3%A9/Apr%C3%A8s%20suppression%20utilisateur.png',
+                        alt: 'Après suppression utilisateur',
+                        caption: 'Espace disque libéré après suppression'
+                    }
+                ]
+            }
+        ]
+    },
     m2l: {
         title: 'DÉVELOPPEMENT DE LA "MAISON DES LIGUES" SITE WEB POUR PRÉSENTER LES DIFFÉRENTES LIGUES SPORTIVES',
         subtitle: 'Développement de la "Maison des ligues" site web pour présenter les différentes ligues sportives',
