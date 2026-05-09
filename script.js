@@ -64,6 +64,18 @@ const missionData = {
             'Savoir configurer et sécuriser un service FTP.',
             'Préparer des scénarios professionnels proches de la réalité.'
         ],
+        competenceObjectives: {
+            'mode-projet': [
+                'Analyser les objectifs et les contraintes du projet.',
+                'Planifier les étapes et organiser le suivi.',
+                'Suivre l\'avancement et ajuster les actions.'
+            ],
+            'service': [
+                'Configurer un service FTP securise pour les utilisateurs.',
+                'Verifier le bon fonctionnement via des tests de connexion.',
+                'Produire une documentation guidee pour l\'utilisateur.'
+            ]
+        },
         steps: [
             {
                 title: 'Travailler en mode projet',
@@ -711,7 +723,11 @@ function openMissionDetail(missionKey) {
     const objectivesList = document.getElementById('mission-objectives');
     if (objectivesList) {
         objectivesList.innerHTML = '';
-        mission.objectives.forEach(objective => {
+        const objectivesToRender = selectedCompetenceKey && mission.competenceObjectives && mission.competenceObjectives[selectedCompetenceKey]
+            ? mission.competenceObjectives[selectedCompetenceKey]
+            : mission.objectives;
+
+        objectivesToRender.forEach(objective => {
             const li = document.createElement('li');
             li.textContent = objective;
             objectivesList.appendChild(li);
