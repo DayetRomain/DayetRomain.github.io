@@ -82,8 +82,8 @@ const missionData = {
                 competenceKey: 'mode-projet',
                 images: [
                     {
-                        src: 'DATASEC.img/Travailler%20en%20mode%20projet/Suivi%20%C3%A9tape%20de%20la%20Mission%20Datasec/Diagramme%20de%20Gantt%20-%20Mission%20Datasec.png',
-                        alt: 'Diagramme de Gantt de la mission DataSec',
+                        src: 'DATASEC.img/Travailler%20en%20mode%20projet/Suivi%20%C3%A9tape%20de%20la%20Mission%20Datasec/Diagramme%20de%20Gantt%20DATASEC.png',
+                        alt: 'Diagramme de Gantt DATASEC',
                         caption: 'Suivi des etapes et planning de la mission DataSec'
                     }
                 ]
