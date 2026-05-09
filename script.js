@@ -66,22 +66,50 @@ const missionData = {
         ],
         steps: [
             {
-                title: 'Analyse du besoin',
+                title: 'Travailler en mode projet',
+                competenceKey: 'mode-projet',
                 images: [
                     {
-                        src: 'DATASEC.img/Analyse%20du%20besoin/contexte%20mission.png',
-                        alt: 'Contexte de la mission',
-                        caption: 'Contexte et objectifs de la mission DataSec'
+                        src: 'DATASEC.img/Travailler%20en%20mode%20projet/Suivi%20%C3%A9tape%20de%20la%20Mission%20Datasec/Diagramme%20de%20Gantt%20-%20Mission%20Datasec.png',
+                        alt: 'Diagramme de Gantt de la mission DataSec',
+                        caption: 'Suivi des etapes et planning de la mission DataSec'
                     }
                 ]
             },
             {
-                title: 'Mise en place d\'une maquette de test',
+                title: 'Mettre a disposition un service informatique - Mode operatoire',
+                competenceKey: 'service',
                 images: [
                     {
-                        src: 'DATASEC.img/mise%20en%20place%20d%E2%80%99une%20maquette%20de%20test/Maquette%20de%20la%20mission.png',
-                        alt: 'Maquette de la mission',
-                        caption: 'Maquette de test pour la mission DataSec'
+                        src: 'DATASEC.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Mode%20op%C3%A9ratoire/Configuration%20des%20Utilisateurs%20serveur%20FTP.png',
+                        alt: 'Configuration des utilisateurs sur le serveur FTP',
+                        caption: 'Configuration des utilisateurs sur le serveur FTP'
+                    },
+                    {
+                        src: 'DATASEC.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Mode%20op%C3%A9ratoire/Sch%C3%A9ma%20r%C3%A9seau%20du%20Plot%20pour%20la%20mission.png',
+                        alt: 'Schema reseau du plot pour la mission',
+                        caption: 'Schema reseau du plot pour la mission DataSec'
+                    },
+                    {
+                        src: 'DATASEC.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Mode%20op%C3%A9ratoire/Test%20connexion%20utilisateur%20au%20serveur.png',
+                        alt: 'Test de connexion utilisateur au serveur',
+                        caption: 'Test de connexion utilisateur au serveur FTP'
+                    }
+                ]
+            },
+            {
+                title: 'Mettre a disposition un service informatique - Documentation guidee pour utilisateur',
+                competenceKey: 'service',
+                images: [
+                    {
+                        src: 'DATASEC.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Documentation%20guid%C3%A9e%20pour%20utilisateur/Connexion%20utilisateur%20et%20restauration.png',
+                        alt: 'Connexion utilisateur et restauration',
+                        caption: 'Connexion utilisateur et restauration des donnees'
+                    },
+                    {
+                        src: 'DATASEC.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Documentation%20guid%C3%A9e%20pour%20utilisateur/Ex%C3%A9cution%20sauvegarde%20r%C3%A9ussi.png',
+                        alt: 'Execution de sauvegarde reussie',
+                        caption: 'Execution de sauvegarde reussie'
                     }
                 ]
             }
@@ -566,6 +594,8 @@ const missionData = {
     }
 };
 
+let selectedCompetenceKey = null;
+
 // Fonction pour ouvrir le menu de sélection des missions groupées
 function openGroupedMissions(groupKey) {
     console.log('openGroupedMissions appelée avec:', groupKey);
@@ -620,6 +650,10 @@ function closeMissionSelection() {
     const selectionSection = document.getElementById('mission-selection');
     if (selectionSection) {
         selectionSection.remove();
+    }
+
+    if (selectedCompetenceKey) {
+        selectedCompetenceKey = null;
     }
     
     // Réafficher la section d'accueil
@@ -688,7 +722,11 @@ function openMissionDetail(missionKey) {
     const stepsContainer = document.getElementById('mission-steps');
     if (stepsContainer) {
         stepsContainer.innerHTML = '';
-        mission.steps.forEach((step, stepIndex) => {
+        const filteredSteps = selectedCompetenceKey
+            ? mission.steps.filter(step => step.competenceKey === selectedCompetenceKey)
+            : mission.steps;
+
+        filteredSteps.forEach((step, stepIndex) => {
             const stepDiv = document.createElement('div');
             stepDiv.className = 'mission-step';
             
@@ -786,6 +824,10 @@ function openMissionDetail(missionKey) {
     // Scroll vers le haut
     window.scrollTo(0, 0);
     console.log('Page de détail mise à jour et affichée');
+
+    if (selectedCompetenceKey) {
+        selectedCompetenceKey = null;
+    }
 }
 
 // Fonction pour fermer la page de détail de mission
@@ -801,6 +843,10 @@ function closeMissionDetail() {
     
     // Retourner au tableau de compétences
     showSection('tableau-competences');
+
+    if (selectedCompetenceKey) {
+        selectedCompetenceKey = null;
+    }
     
     console.log('Retour au tableau effectué');
 }
@@ -1610,13 +1656,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionKey = this.getAttribute('data-mission');
             const groupKey = this.getAttribute('data-group');
             const popupKey = this.getAttribute('data-popup');
+            const competenceKey = this.getAttribute('data-competence');
 
             if (missionKey && typeof window.openMissionDetail === 'function') {
+                selectedCompetenceKey = null;
                 window.openMissionDetail(missionKey);
                 return;
             }
 
             if (groupKey && typeof window.openGroupedMissions === 'function') {
+                selectedCompetenceKey = competenceKey || null;
                 window.openGroupedMissions(groupKey);
                 return;
             }
