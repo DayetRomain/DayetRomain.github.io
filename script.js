@@ -573,28 +573,120 @@ const missionData = {
     websecu: {
         title: 'MISSION WEB SECU M2L',
         subtitle: 'Mise en place d\'une infrastructure complète (Serveur WEB, DNS, Active Directory, NAGIOS)',
-        context: 'Mission d\'infrastructure pour déployer un environnement technique complet au sein du contexte M2L.',
+        context: 'Mission d\'infrastructure pour déployer un environnement complet M2L. L\'objectif est de structurer le patrimoine informatique (AD, DNS, droits NTFS), de mettre en service les composants (serveur web, supervision) et de piloter l\'avancement avec des preuves.',
         objectives: [
-            'Déployer les services techniques attendus (WEB, DNS, AD, NAGIOS)',
-            'Structurer l\'infrastructure réseau et système',
-            'Valider le fonctionnement des services puis préparer les éléments de preuve'
+            'Structurer le patrimoine informatique (AD, DNS, droits NTFS)',
+            'Mettre en service les composants web et supervision',
+            'Tracer le suivi de mission et les validations'
         ],
+        competenceObjectives: {
+            'patrimoine': [
+                'Structurer l\'Active Directory (OU, utilisateurs, groupes)',
+                'Administrer les droits NTFS sur les partages',
+                'Configurer et vérifier les zones DNS'
+            ],
+            'service': [
+                'Mettre en production un serveur web fonctionnel',
+                'Superviser les hotes et services via Nagios',
+                'Valider la disponibilité des services'
+            ],
+            'mode-projet': [
+                'Planifier et suivre la mission',
+                'Documenter l\'avancement et les preuves',
+                'Cloturer la mission avec un bilan'
+            ]
+        },
         steps: [
             {
-                title: 'Serveur WEB',
-                images: []
+                title: 'Structure Active Directory (OU + utilisateurs + groupes)',
+                competenceKey: 'patrimoine',
+                images: [
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Structure%20Active%20Directory%20%28OU%20%2B%20utilisateurs%20%2B%20groupes%29/arborescence%20compl%C3%A8te%20des%20Unit%C3%A9s%20d%27Organisation%20%28OU%29%20dans%20les%20groupes.png',
+                        alt: 'Arborescence des OU dans les groupes',
+                        caption: 'Arborescence complete des OU et organisation des groupes'
+                    },
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Structure%20Active%20Directory%20%28OU%20%2B%20utilisateurs%20%2B%20groupes%29/Appartenance%20des%20utilisateurs%20%C3%A0%20leurs%20groupes%20respectifs.png',
+                        alt: 'Appartenance des utilisateurs a leurs groupes',
+                        caption: 'Appartenance des utilisateurs a leurs groupes respectifs'
+                    }
+                ]
             },
             {
-                title: 'Serveur DNS',
-                images: []
+                title: 'Gestion des droits NTFS sur les partages',
+                competenceKey: 'patrimoine',
+                images: [
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Gestion%20droits%20NTFS%20sur%20les%20partages/Tableau%20des%20droits%20NTFS%20sur%20les%20partages.png',
+                        alt: 'Tableau des droits NTFS sur les partages',
+                        caption: 'Tableau des droits NTFS par partage'
+                    }
+                ]
             },
             {
-                title: 'Active Directory',
-                images: []
+                title: 'Console DNS (zone directe + zone inverse)',
+                competenceKey: 'patrimoine',
+                images: [
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Console%20DNS%20%28zone%20directe%20%2B%20zone%20inverse%29/Enregistrements%20Zone%20de%20recherche%20Directe.png',
+                        alt: 'Enregistrements de zone directe DNS',
+                        caption: 'Zone DNS directe et enregistrements associes'
+                    },
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Console%20DNS%20%28zone%20directe%20%2B%20zone%20inverse%29/Enregistrements%20Zone%20de%20recherche%20Inverse.png',
+                        alt: 'Enregistrements de zone inverse DNS',
+                        caption: 'Zone DNS inverse et enregistrements associes'
+                    }
+                ]
             },
             {
-                title: 'Supervision NAGIOS',
-                images: []
+                title: 'Serveur Web Operationnel',
+                competenceKey: 'service',
+                images: [
+                    {
+                        src: 'WEBSECU.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Serveur%20Web%20Op%C3%A9rationnel/Serveur%20Web%20Apache%20fonctionnelle.png',
+                        alt: 'Serveur Web Apache fonctionnel',
+                        caption: 'Serveur Web Apache operationnel'
+                    },
+                    {
+                        src: 'WEBSECU.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Serveur%20Web%20Op%C3%A9rationnel/site%20de%20la%20Maison%20des%20Ligues%20accessible%20depuis%20navigateur%20client.png',
+                        alt: 'Site Maison des Ligues accessible',
+                        caption: 'Site accessible depuis un navigateur client'
+                    }
+                ]
+            },
+            {
+                title: 'Supervision Nagios des hotes et services',
+                competenceKey: 'service',
+                images: [
+                    {
+                        src: 'WEBSECU.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Supervision%20Nagios%20des%20h%C3%B4tes%20et%20services/Supervision%20des%20h%C3%B4tes%20depuis%20Serveur%20NAGIOS.png',
+                        alt: 'Supervision des hotes depuis Nagios',
+                        caption: 'Supervision des hotes depuis Nagios'
+                    },
+                    {
+                        src: 'WEBSECU.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Supervision%20Nagios%20des%20h%C3%B4tes%20et%20services/Supervision%20des%20diff%C3%A9rents%20services%20des%20h%C3%B4tes%20depuis%20Serveur%20NAGIOS.png',
+                        alt: 'Supervision des services depuis Nagios',
+                        caption: 'Supervision des services depuis Nagios'
+                    }
+                ]
+            },
+            {
+                title: 'Travailler en mode projet',
+                competenceKey: 'mode-projet',
+                images: [
+                    {
+                        src: 'WEBSECU.img/Travailler%20en%20mode%20projet/Trello%20WEB-SECU.png',
+                        alt: 'Suivi Trello WEB-SECU',
+                        caption: 'Suivi des taches via Trello'
+                    },
+                    {
+                        src: 'WEBSECU.img/Travailler%20en%20mode%20projet/Vue%20int%C3%A9rieur%20de%20cette%20t%C3%A2che.png',
+                        alt: 'Vue interieur de la tache',
+                        caption: 'Vue detaillee d\'une tache projet'
+                    }
+                ]
             }
         ]
     }
@@ -1669,7 +1761,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const competenceKey = this.getAttribute('data-competence');
 
             if (missionKey && typeof window.openMissionDetail === 'function') {
-                selectedCompetenceKey = null;
+                selectedCompetenceKey = competenceKey || null;
                 window.openMissionDetail(missionKey);
                 return;
             }
