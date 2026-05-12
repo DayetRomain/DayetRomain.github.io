@@ -130,60 +130,54 @@ const missionData = {
     velanne: {
         title: 'MISSION VELANNE',
         subtitle: 'Mission Velanne (VLAN)',
-        context: 'Mise en place d\'une segmentation réseau avec VLANs pour isoler les ligues sportives et sécuriser le réseau.',
+        context: 'Dans le cadre de la mission Velanne, j\'ai segmenté le réseau de la M2L par VLAN afin d\'isoler les ligues, sécuriser les flux et formaliser la mise en service. La mission s\'inscrit dans une démarche de travail en mode projet avec planification, suivi et validation par tests.',
         objectives: [
-            'Séparer logiquement les réseaux des ligues',
-            'Améliorer la sécurité et la gestion des accès',
-            'Mise en place de VLANs pour gérer les switchs'
+            'Définir la segmentation VLAN et les règles d\'isolation attendues',
+            'Mettre en place la configuration et valider la connectivité par des tests',
+            'Documenter l\'avancement et les preuves de réalisation'
         ],
+        competenceObjectives: {
+            'mode-projet': [
+                'Cadrer la mission et fixer les objectifs de segmentation',
+                'Planifier et suivre l\'avancement (compte rendu début/fin)',
+                'Valider les résultats et formaliser les preuves'
+            ],
+            'service': [
+                'Configurer les VLANs et les paramètres réseau nécessaires',
+                'Tester la continuité du service et consigner les résultats',
+                'Présenter la mise en service de manière claire et exploitable'
+            ]
+        },
         steps: [
             {
-                title: 'Exploitation des normes VLAN (IEEE 802.1Q)',
+                title: 'Travailler en mode projet',
+                competenceKey: 'mode-projet',
                 images: [
                     {
-                        src: 'VELANNE.img/Exploitation des normes VLAN %28IEEE 802.1Q%29/Création de VLAN.png',
-                        alt: 'Création de VLAN',
-                        caption: 'Interface de création de VLAN selon les normes IEEE 802.1Q'
+                        src: 'VELANNE.img/Travailler%20en%20mode%20projet/Compte%20rendu%20d%C3%A9but%20de%20mission.png',
+                        alt: 'Compte rendu début de mission',
+                        caption: 'Compte rendu de début de mission et objectifs fixés'
+                    },
+                    {
+                        src: 'VELANNE.img/Travailler%20en%20mode%20projet/Compte%20rendu%20de%20fin%20de%20mission.png',
+                        alt: 'Compte rendu fin de mission',
+                        caption: 'Compte rendu de fin de mission et bilan des actions'
                     }
                 ]
             },
             {
-                title: 'Mise en place du VLAN 99 (administration)',
+                title: 'Mettre à disposition un service informatique',
+                competenceKey: 'service',
                 images: [
                     {
-                        src: 'VELANNE.img/Mise en place du VLAN 99 %28administration%29/Création et config VLAN administration.png',
-                        alt: 'Configuration VLAN administration',
-                        caption: 'Création et configuration du VLAN 99 pour l\'administration des switchs'
-                    }
-                ]
-            },
-            {
-                title: 'Vérification de la continuité du service (tests de ping intra/inter-VLAN)',
-                images: [
+                        src: 'VELANNE.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Connexion%20au%20serveur%20ftp%20r%C3%A9ussi.png',
+                        alt: 'Connexion au serveur FTP réussie',
+                        caption: 'Validation d\'un accès fonctionnel au service'
+                    },
                     {
-                        src: 'VELANNE.img/Vérification de la continuité du service %28tests de ping intrainter-VLAN%29/plan de test.png',
-                        alt: 'Plan de test VLAN',
-                        caption: 'Plan de test pour vérifier la continuité du service et les communications intra/inter-VLAN'
-                    }
-                ]
-            },
-            {
-                title: 'Réponse à la demande d\'isoler les réseaux',
-                images: [
-                    {
-                        src: 'VELANNE.img/Réponse à la demande d%27isoler les réseaux/Création VLANs utilisateurs.png',
-                        alt: 'Création VLANs utilisateurs',
-                        caption: 'Création des VLANs utilisateurs pour isoler les réseaux des différentes ligues'
-                    }
-                ]
-            },
-            {
-                title: 'Déploiement du service avec configuration trunk',
-                images: [
-                    {
-                        src: 'VELANNE.img/Déploiement du service avec configuration trunk/trunk entre les switchs.png',
-                        alt: 'Configuration trunk entre les switchs',
-                        caption: 'Configuration trunk entre les switchs pour le déploiement du service VLAN'
+                        src: 'VELANNE.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Tableau%20de%20test%20des%20pings%20apr%C3%A8s%20configuration%20des%20VLANs%20et%20ACL.png',
+                        alt: 'Tableau de test des pings après configuration',
+                        caption: 'Tableau de tests des pings après configuration VLAN/ACL'
                     }
                 ]
             }
