@@ -570,6 +570,34 @@ const missionData = {
             }
         ]
     },
+    veille: {
+        title: 'VEILLE TECHNOLOGIQUE',
+        subtitle: 'Veille technologique (IA et cybersécurité)',
+        context: 'Dans le cadre du BTS SIO, je mène une veille pour suivre les évolutions de l\'intelligence artificielle et de la cybersécurité, analyser les impacts, puis partager une synthèse claire et structurée.',
+        objectives: [
+            'Sélectionner des sources fiables et récentes',
+            'Analyser les tendances, risques et enjeux clés',
+            'Produire une synthèse accessible et actualisée'
+        ],
+        steps: [
+            {
+                title: 'Collecte et sélection des sources',
+                description: 'Recensement d\'articles 2026 et tri des informations utiles pour l\'IA et la cybersécurité.',
+                images: []
+            },
+            {
+                title: 'Synthèse et analyse',
+                description: 'Rédaction d\'une synthèse mettant en évidence les tendances, risques et impacts.',
+                images: []
+            },
+            {
+                title: 'Accéder à la veille sur mon portfolio',
+                description: 'Ouvrir la section Veille du site pour consulter les contenus.',
+                directLink: '#veille',
+                images: []
+            }
+        ]
+    },
     websecu: {
         title: 'MISSION WEB SECU M2L',
         subtitle: 'Mise en place d\'une infrastructure complète (Serveur WEB, DNS, Active Directory, NAGIOS)',
@@ -863,7 +891,12 @@ function openMissionDetail(missionKey) {
                 stepHeader.addEventListener('click', () => {
                     // Vérifier s'il y a un lien direct pour cette étape
                     if (step.directLink) {
-                        // Rediriger directement vers le lien
+                        // Lien interne -> afficher la section correspondante
+                        if (step.directLink.startsWith('#')) {
+                            showSection(step.directLink.substring(1));
+                            return;
+                        }
+                        // Lien externe
                         window.open(step.directLink, '_blank');
                         return;
                     }
@@ -1774,6 +1807,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (popupKey) {
                 openPopup(popupKey);
+            }
+        });
+    });
+
+    document.querySelectorAll('.mission-title-clickable[data-mission]').forEach(title => {
+        title.addEventListener('click', function() {
+            const missionKey = this.getAttribute('data-mission');
+            if (missionKey && typeof window.openMissionDetail === 'function') {
+                selectedCompetenceKey = null;
+                window.openMissionDetail(missionKey);
             }
         });
     });
