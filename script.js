@@ -58,11 +58,12 @@ const missionData = {
     'datasec': {
         title: 'Mission DataSec',
         subtitle: 'Mission DataSec',
-        context: 'Dans le cadre de ma formation en administration système et réseaux, nous avons été amenés à mettre en place une solution de sauvegarde automatisée pour les structures hébergées à la M2L. L\'objectif était de permettre à chaque utilisateur de sauvegarder ses données sur un serveur FTP de façon sécurisée, avec une restauration possible en cas de besoin.',
+        context: 'Dans le cadre de ma formation en administration système et réseaux, nous avons été amenés à mettre en place une solution de sauvegarde automatisée pour les structures hébergées à la M2L. L\'objectif était de permettre à chaque utilisateur de sauvegarder ses données sur un serveur FTP de façon sécurisée, avec une restauration possible en cas de besoin, et une documentation claire pour l\'utilisateur.',
         objectives: [
             'Acquérir des compétences techniques en gestion de sauvegardes.',
             'Savoir configurer et sécuriser un service FTP.',
-            'Préparer des scénarios professionnels proches de la réalité.'
+            'Préparer des scénarios professionnels proches de la réalité.',
+            'Produire une documentation utilisateur pour la sauvegarde FTP.'
         ],
         competenceObjectives: {
             'mode-projet': [
@@ -124,6 +125,13 @@ const missionData = {
                         caption: 'Execution de sauvegarde reussie'
                     }
                 ]
+            },
+            {
+                title: 'Documentation utilisateur - sauvegarde FTP (PDF)',
+                competenceKey: 'service',
+                description: 'Guide utilisateur pour la sauvegarde FTP.',
+                directLink: 'VELANNE.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/DOC%20Utilisateur%20sauvegarde%20FTP.pdf',
+                images: []
             }
         ]
     },
