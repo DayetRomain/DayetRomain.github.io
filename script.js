@@ -461,32 +461,18 @@ const missionData = {
     creationscript: {
         title: 'CRÉATION DU SCRIPT POWERSHELL DE SUPPRESSION DE SESSIONS UTILISATEURS AUTOMATISÉES INACTIVES (> 60 JOURS)',
         subtitle: 'Création du script PowerShell de suppression de sessions inactives',
-        context: 'Automatisation de la suppression des sessions utilisateurs inactives pour libérer l\'espace disque et fiabiliser les interventions.',
+        context: 'Rédaction d\'un cahier des charges et développement d\'un script PowerShell pour supprimer automatiquement les sessions inactives, afin de libérer l\'espace disque et fiabiliser les interventions.',
         objectives: [
-            'Identifier les sessions inactives à traiter',
-            'Automatiser la suppression avec un script PowerShell',
+            'Formaliser le cahier des charges du script (périmètre et critères > 60 jours)',
+            'Mettre en place la suppression automatisée avec gestion d\'erreurs',
             'Valider le bon fonctionnement sur un poste de formation'
         ],
         steps: [
             {
-                title: 'Mécanisme de gestion d\'erreurs',
-                images: [
-                    {
-                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/Date%20utilisateur%20vide.png',
-                        alt: 'Date utilisateur vide',
-                        caption: 'Gestion du cas où la date utilisateur est vide'
-                    },
-                    {
-                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/Erreur%20affichage%20Date%20Utilisateur.png',
-                        alt: 'Erreur affichage date utilisateur',
-                        caption: 'Affichage d\'erreur pour une date utilisateur invalide'
-                    },
-                    {
-                        src: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/R%C3%A9solution%20pour%20assurer%20une%20bonne%20exploitation%20d%27une%20date.png',
-                        alt: 'Résolution pour exploitation de date',
-                        caption: 'Correction pour assurer l\'exploitation correcte de la date'
-                    }
-                ]
+                title: 'Cahier des charges du script PowerShell',
+                description: 'Document de cadrage précisant le périmètre, les contraintes et la gestion des erreurs.',
+                directLink: 'cr%C3%A9ationscript.img/m%C3%A9canisme%20de%20gestion%20d%27erreurs/cahier%20des%20charges%20Script%20Powershell.pdf',
+                images: []
             },
             {
                 title: 'Résultat final d\'exécution du script sur le poste de formation',
