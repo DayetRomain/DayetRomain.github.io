@@ -1185,20 +1185,24 @@ html {
 
 .words-wrapper {
     display: inline-flex;
+    align-items: baseline;
     position: relative;
     text-align: left;
-    height: 1.5em;
+    height: 1em;
     vertical-align: baseline;
     margin-left: 10px;
 }
 
 .words-wrapper .word {
     position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     overflow: hidden;
     color: #64ffda;
     animation: rotateWord 9s linear infinite 0s;
     white-space: nowrap;
+    line-height: 1.2;
     margin: 0;
     padding: 0;
 }
