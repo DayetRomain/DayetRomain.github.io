@@ -194,65 +194,43 @@ const missionData = {
     kiwi: {
         title: 'MISSION KIWI',
         subtitle: 'Mission Kiwi',
-        context: 'Mise en place d\'un Wi-Fi sécurisé et d\'un serveur DHCP pour automatiser l\'attribution des adresses IP.',
+        context: 'Dans la mission Kiwi, j\'ai mis en service un serveur DHCP pour attribuer automatiquement des adresses IP aux utilisateurs filaires et Wi-Fi, avec des réservations d\'adresses pour garantir une attribution maîtrisée. Le suivi de la mission est prévu via Trello (preuve à venir) pour la compétence travailler en mode projet.',
         objectives: [
-            'Sécuriser l\'accès au Wi-Fi avec une clé WPA',
-            'Simplifier la gestion avec un serveur DHCP',
-            'Garantir la continuité en testant la connectivité'
+            'Mettre en service un serveur DHCP opérationnel pour l\'attribution automatique des adresses IP.',
+            'Configurer des réservations DHCP pour les plages IP filaire et Wi-Fi.',
+            'Organiser le suivi de mission via Trello (preuve à venir).'
         ],
+        competenceObjectives: {
+            'service': [
+                'Valider le statut opérationnel du serveur DHCP.',
+                'Paramétrer des réservations DHCP pour les utilisateurs filaires et Wi-Fi.',
+                'Garantir une attribution d\'adresses IP conforme aux besoins.'
+            ],
+            'mode-projet': [
+                'Planifier et suivre la mission dans Trello (preuve à venir).',
+                'Tracer l\'avancement et les actions réalisées.'
+            ]
+        },
         steps: [
             {
-                title: 'Sécurisation du Wi-Fi (WPA-Personnal)',
+                title: 'Serveur DHCP opérationnel - statut du service',
+                competenceKey: 'service',
                 images: [
                     {
-                        src: 'KIWI.img/S%C3%A9curisation du Wi-Fi %28WPA-Personnal%29/config WPA-Personnal + cl%C3%A9.png',
-                        alt: 'Configuration WPA-Personnal avec clé',
-                        caption: 'Configuration de la sécurisation Wi-Fi avec WPA-Personnal et définition de la clé de sécurité'
+                        src: 'KIWI.img/Mission%20Kiwi/Serveur%20DHCP%20op%C3%A9rationnel/Statut%20du%20serveur%20DHCP%20op%C3%A9rationnel.png',
+                        alt: 'Statut du serveur DHCP opérationnel',
+                        caption: 'Statut du serveur DHCP confirmant le service opérationnel'
                     }
                 ]
             },
             {
-                title: 'Vérification de la continuité (tests ping + attribution IP DHCP)',
+                title: 'Réservation DHCP filaire et Wi-Fi - plage IP',
+                competenceKey: 'service',
                 images: [
                     {
-                        src: 'KIWI.img/V%C3%A9rification de la continuit%C3%A9 %28tests ping + attribution IP DHCP%29/Adresse IP attribu%C3%A9e automatiquement.png',
-                        alt: 'Adresse IP attribuée automatiquement',
-                        caption: 'Vérification que l\'adresse IP est attribuée automatiquement par le serveur DHCP'
-                    },
-                    {
-                        src: 'KIWI.img/V%C3%A9rification de la continuit%C3%A9 %28tests ping + attribution IP DHCP%29/Configuration DHCP filaire & Wi-Fi.png',
-                        alt: 'Configuration DHCP filaire et Wi-Fi',
-                        caption: 'Configuration du serveur DHCP pour les connexions filaire et Wi-Fi'
-                    }
-                ]
-            },
-            {
-                title: 'Réponse à la demande d\'automatiser l\'attribution IP',
-                images: [
-                    {
-                        src: 'KIWI.img/Réponse à la demande d%27automatiser l%27attribution IP/Réservations DHCP %28MAC → IP%29.png',
-                        alt: 'Réservations DHCP MAC vers IP',
-                        caption: 'Configuration des réservations DHCP pour associer des adresses MAC à des adresses IP fixes'
-                    }
-                ]
-            },
-            {
-                title: 'Déploiement du point d\'accès et du serveur DHCP',
-                images: [
-                    {
-                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Config du point acc%C3%A8s Wi-Fi.png',
-                        alt: 'Configuration du point d\'accès Wi-Fi',
-                        caption: 'Configuration et paramétrage du point d\'accès Wi-Fi pour assurer la connectivité sans fil'
-                    },
-                    {
-                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Installation du serveur DHCP Ubuntu.png',
-                        alt: 'Installation du serveur DHCP Ubuntu',
-                        caption: 'Installation et configuration du serveur DHCP sur Ubuntu Server'
-                    },
-                    {
-                        src: 'KIWI.img/D%C3%A9ploiement du point acc%C3%A8s et du serveur DHCP/Configuration du DHCP %28fichier dhcpd.conf%29.png',
-                        alt: 'Configuration du DHCP fichier dhcpd.conf',
-                        caption: 'Configuration détaillée du serveur DHCP via le fichier dhcpd.conf'
+                        src: 'KIWI.img/Mission%20Kiwi/R%C3%A9servation%20DHCP%20Filaire%20et%20Wifi/R%C3%A9servation%20plage%20IP%20WIFI%20et%20Filaire.png',
+                        alt: 'Réservation plage IP Wi-Fi et filaire',
+                        caption: 'Réservations DHCP pour les plages IP Wi-Fi et filaire'
                     }
                 ]
             }
