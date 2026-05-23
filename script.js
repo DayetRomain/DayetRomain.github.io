@@ -292,6 +292,12 @@ const missionData = {
                         caption: 'Activation de BitLocker avec sauvegarde dans Azure AD'
                     }
                 ]
+            },
+            {
+                title: 'Annexe - Procédure d\'installation Windows 11 (PDF)',
+                description: 'Procédure d\'installation Windows 11 - PC ANRAS.',
+                directLink: 'Pr%C3%A9parationdeposte.img/Annexe/PROC%C3%89DURE%20D%27INSTALLATION%20WINDOWS%2011%20-%20PC%20ANRAS.pdf',
+                images: []
             }
         ]
     },
@@ -372,53 +378,6 @@ const missionData = {
                         src: 'fibreoptique.img/Proc%C3%A8s%20Verbal%20de%20Mise%20en%20Service%20Orange%20%28fibre%20active%29/Deuxi%C3%A8me%20partie%20Proc%C3%A8s%20de%20mise%20en%20service%20de%20la%20fibre%20optique%20par%20ORANGE.png',
                         alt: 'Deuxième partie Procès de mise en service de la fibre optique par ORANGE',
                         caption: 'Procès-verbal de mise en service de la fibre optique (page 2)'
-                    }
-                ]
-            }
-        ]
-    },
-    webex: {
-        title: 'MISE À JOUR & INTÉGRATION DES CONTACTS – WEBEX CONTROL HUB',
-        subtitle: 'Mise à jour & intégration des contacts – Webex Control Hub',
-        context: 'Mise à jour et centralisation des contacts établissements dans Webex.',
-        objectives: [
-            'Structurer les données et le fichier CSV',
-            'Diagnostiquer l\'incident d\'importation',
-            'Valider l\'importation dans Webex Control Hub'
-        ],
-        steps: [
-            {
-                title: 'Préparation et structuration des données',
-                images: [
-                    {
-                        src: 'int%C3%A9grationsdescontacts.img/pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es/Collecte%20des%20informations.png',
-                        alt: 'Collecte des informations',
-                        caption: 'Collecte des informations avant structuration'
-                    },
-                    {
-                        src: 'int%C3%A9grationsdescontacts.img/pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es/Ficher%20CSV%20pr%C3%A9paration%20et%20de%20structuration%20des%20donn%C3%A9es.png',
-                        alt: 'Fichier CSV préparation et structuration des données',
-                        caption: 'Structuration des données dans le fichier CSV'
-                    }
-                ]
-            },
-            {
-                title: 'Incident et diagnostic depuis Console Webex Control Hub',
-                images: [
-                    {
-                        src: 'int%C3%A9grationsdescontacts.img/Incident%20et%20diagnostic%20depuis%20Console%20webex%20Control%20HUB/Erreur%20apr%C3%A8s%20Premi%C3%A8re%20importation%20de%20la%20liste%20de%20contact%20CSV.png',
-                        alt: 'Erreur après première importation de la liste de contact CSV',
-                        caption: 'Incident détecté lors de l\'importation dans Webex Control Hub'
-                    }
-                ]
-            },
-            {
-                title: 'Importation réussie dans Webex',
-                images: [
-                    {
-                        src: 'int%C3%A9grationsdescontacts.img/Importation%20r%C3%A9ussie%20dans%20Webex/R%C3%A9solution%20importation%20de%20la%20liste%20des%20contacts.png',
-                        alt: 'Résolution importation de la liste des contacts',
-                        caption: 'Importation réussie après correction'
                     }
                 ]
             }
@@ -564,6 +523,49 @@ const missionData = {
             }
         ]
     },
+    glpi: {
+        title: 'RECENSEMENT AUTOMATISÉ DU PATRIMOINE INFORMATIQUE VIA GLPI',
+        subtitle: 'Recensement automatisé du patrimoine informatique via GLPI',
+        context: 'Mise en place d\'un recensement automatisé des postes via GLPI pour centraliser l\'inventaire et disposer d\'informations fiables sur le matériel et les logiciels installés.',
+        objectives: [
+            'Automatiser l\'inventaire des postes avec l\'agent GLPI',
+            'Consolider les informations dans le tableau de bord GLPI',
+            'Accéder au détail matériel et logiciel de chaque poste'
+        ],
+        steps: [
+            {
+                title: 'Recensement automatisé via GLPI (preuves)',
+                images: [
+                    {
+                        src: 'TP%20GLPI.img/Recensement%20automatis%C3%A9%20du%20patrimoine%20informatique%20via%20GLPI/Tableau%20de%20bord%20GLPI.png',
+                        alt: 'Tableau de bord GLPI',
+                        caption: 'Tableau de bord GLPI avec l\'inventaire centralisé'
+                    },
+                    {
+                        src: 'TP%20GLPI.img/Recensement%20automatis%C3%A9%20du%20patrimoine%20informatique%20via%20GLPI/Patrimoine%20logiciel%20des%203%20postes.png',
+                        alt: 'Patrimoine logiciel des 3 postes',
+                        caption: 'Vue globale du patrimoine logiciel recensé'
+                    },
+                    {
+                        src: 'TP%20GLPI.img/Recensement%20automatis%C3%A9%20du%20patrimoine%20informatique%20via%20GLPI/informations%20pr%C3%A9cises%20de%20chaque%20poste%20r%C3%A9f%C3%A9renc%C3%A9.png',
+                        alt: 'Informations précises de chaque poste référencé',
+                        caption: 'Fiche détaillée d\'un poste référencé'
+                    },
+                    {
+                        src: 'TP%20GLPI.img/Recensement%20automatis%C3%A9%20du%20patrimoine%20informatique%20via%20GLPI/Recensement%20via%20l%27agent%20GLPI.png',
+                        alt: 'Recensement via l\'agent GLPI',
+                        caption: 'Inventaire automatisé via l\'agent GLPI'
+                    }
+                ]
+            },
+            {
+                title: 'Annexe - Énoncé TP GLPI (PDF)',
+                description: 'Énoncé du TP GLPI sur la fonction d\'inventaire.',
+                directLink: 'TP%20GLPI.img/Annexe/25.26%20-%202SIO.TC.B1%20-%20%28TP03%29%20GLPI%20-%20Fonction%20d%27inventaire%20%28%C3%A9nonc%C3%A9%29.pdf',
+                images: []
+            }
+        ]
+    },
     veille: {
         title: 'VEILLE TECHNOLOGIQUE',
         subtitle: 'Veille technologique (IA et cybersécurité)',
@@ -647,22 +649,6 @@ const missionData = {
                 ]
             },
             {
-                title: 'Console DNS (zone directe + zone inverse)',
-                competenceKey: 'patrimoine',
-                images: [
-                    {
-                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Console%20DNS%20%28zone%20directe%20%2B%20zone%20inverse%29/Enregistrements%20Zone%20de%20recherche%20Directe.png',
-                        alt: 'Enregistrements de zone directe DNS',
-                        caption: 'Zone DNS directe et enregistrements associes'
-                    },
-                    {
-                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Console%20DNS%20%28zone%20directe%20%2B%20zone%20inverse%29/Enregistrements%20Zone%20de%20recherche%20Inverse.png',
-                        alt: 'Enregistrements de zone inverse DNS',
-                        caption: 'Zone DNS inverse et enregistrements associes'
-                    }
-                ]
-            },
-            {
                 title: 'Serveur Web Operationnel',
                 competenceKey: 'service',
                 images: [
@@ -691,6 +677,22 @@ const missionData = {
                         src: 'WEBSECU.img/Mettre%20%C3%A0%20disposition%20un%20service%20informatique/Supervision%20Nagios%20des%20h%C3%B4tes%20et%20services/Supervision%20des%20diff%C3%A9rents%20services%20des%20h%C3%B4tes%20depuis%20Serveur%20NAGIOS.png',
                         alt: 'Supervision des services depuis Nagios',
                         caption: 'Supervision des services depuis Nagios'
+                    }
+                ]
+            },
+            {
+                title: 'Continuité de service via supervision NAGIOS',
+                competenceKey: 'patrimoine',
+                images: [
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Continuit%C3%A9%20de%20service%20via%20supervision%20NAGIOS/Supervision%20des%20h%C3%B4tes%20depuis%20Serveur%20NAGIOS.png',
+                        alt: 'Supervision des hotes depuis serveur NAGIOS',
+                        caption: 'Supervision des hotes depuis serveur NAGIOS'
+                    },
+                    {
+                        src: 'WEBSECU.img/G%C3%A9rer%20le%20patrimoine%20informatique/Continuit%C3%A9%20de%20service%20via%20supervision%20NAGIOS/Supervision%20des%20diff%C3%A9rents%20services%20des%20h%C3%B4tes%20depuis%20Serveur%20NAGIOS.png',
+                        alt: 'Supervision des services des hotes depuis serveur NAGIOS',
+                        caption: 'Supervision des services des hotes depuis serveur NAGIOS'
                     }
                 ]
             },
