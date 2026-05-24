@@ -194,11 +194,12 @@ const missionData = {
     kiwi: {
         title: 'MISSION KIWI',
         subtitle: 'Mission Kiwi',
-        context: 'Dans la mission Kiwi, j\'ai mis en service un serveur DHCP pour attribuer automatiquement des adresses IP aux utilisateurs filaires et Wi-Fi, avec des réservations d\'adresses pour garantir une attribution maîtrisée. Le suivi de la mission est prévu via Trello (preuve à venir) pour la compétence travailler en mode projet.',
+        context: 'Dans la mission Kiwi, j\'ai organisé le suivi via Trello (vue globale et justification d\'un retard) et mis en service un serveur DHCP pour attribuer automatiquement des adresses IP aux utilisateurs filaires et Wi-Fi, avec des réservations pour garantir une attribution maîtrisée.',
         objectives: [
+            'Structurer le suivi de mission sur Trello (vue globale) et tracer l\'avancement.',
+            'Justifier et documenter la cause du retard constaté.',
             'Mettre en service un serveur DHCP opérationnel pour l\'attribution automatique des adresses IP.',
-            'Configurer des réservations DHCP pour les plages IP filaire et Wi-Fi.',
-            'Organiser le suivi de mission via Trello (preuve à venir).'
+            'Configurer des réservations DHCP pour les plages IP filaire et Wi-Fi.'
         ],
         competenceObjectives: {
             'service': [
@@ -207,11 +208,28 @@ const missionData = {
                 'Garantir une attribution d\'adresses IP conforme aux besoins.'
             ],
             'mode-projet': [
-                'Planifier et suivre la mission dans Trello (preuve à venir).',
+                'Planifier et suivre la mission dans Trello (vue globale).',
+                'Analyser et expliquer la cause du retard dans la mission.',
                 'Tracer l\'avancement et les actions réalisées.'
             ]
         },
         steps: [
+            {
+                title: 'Travailler en mode projet',
+                competenceKey: 'mode-projet',
+                images: [
+                    {
+                        src: 'KIWI.img/Travailler%20en%20mode%20projet/Vue%20globale%20Trello.png',
+                        alt: 'Vue globale Trello',
+                        caption: 'Vue globale Trello pour le suivi de la mission Kiwi'
+                    },
+                    {
+                        src: 'KIWI.img/Travailler%20en%20mode%20projet/Description%20de%20la%20cause%20du%20retard%20dans%20la%20mission.png',
+                        alt: 'Description de la cause du retard dans la mission',
+                        caption: 'Justification et description de la cause du retard'
+                    }
+                ]
+            },
             {
                 title: 'Serveur DHCP opérationnel - statut du service',
                 competenceKey: 'service',
@@ -547,23 +565,12 @@ const missionData = {
     veille: {
         title: 'VEILLE TECHNOLOGIQUE',
         subtitle: 'Veille technologique (IA et cybersécurité)',
-        context: 'Dans le cadre du BTS SIO, je mène une veille pour suivre les évolutions de l\'intelligence artificielle et de la cybersécurité, analyser les impacts, puis partager une synthèse claire et structurée.',
+        context: 'Dans le cadre du BTS SIO, je mets à disposition ma veille IA et cybersécurité sur mon portfolio pour une consultation claire et centralisée.',
         objectives: [
-            'Sélectionner des sources fiables et récentes',
-            'Analyser les tendances, risques et enjeux clés',
-            'Produire une synthèse accessible et actualisée'
+            'Centraliser les contenus de veille dans la section dédiée du portfolio',
+            'Rendre la synthèse consultable facilement par l\'utilisateur'
         ],
         steps: [
-            {
-                title: 'Collecte et sélection des sources',
-                description: 'Recensement d\'articles 2026 et tri des informations utiles pour l\'IA et la cybersécurité.',
-                images: []
-            },
-            {
-                title: 'Synthèse et analyse',
-                description: 'Rédaction d\'une synthèse mettant en évidence les tendances, risques et impacts.',
-                images: []
-            },
             {
                 title: 'Accéder à la veille sur mon portfolio',
                 description: 'Ouvrir la section Veille du site pour consulter les contenus.',
@@ -691,6 +698,17 @@ const missionData = {
                 ]
             }
         ]
+    },
+    portfolio: {
+        title: 'RÉALISATION PORTFOLIO',
+        subtitle: 'Portfolio professionnel',
+        context: 'Portfolio en ligne qui centralise mon parcours, mes compétences et mes preuves dans un espace clair et structuré.',
+        objectives: [
+            'Mettre en place un environnement d\'apprentissage personnel centralisé',
+            'Rendre visible mon identité professionnelle',
+            'Disposer d\'un support concret pour présenter mon projet professionnel'
+        ],
+        steps: []
     }
 };
 
@@ -829,6 +847,11 @@ function openMissionDetail(missionKey) {
         const filteredSteps = selectedCompetenceKey
             ? mission.steps.filter(step => step.competenceKey === selectedCompetenceKey)
             : mission.steps;
+
+        const stepsSection = stepsContainer.closest('.mission-section');
+        if (stepsSection) {
+            stepsSection.style.display = filteredSteps.length > 0 ? '' : 'none';
+        }
 
         filteredSteps.forEach((step, stepIndex) => {
             const stepDiv = document.createElement('div');
