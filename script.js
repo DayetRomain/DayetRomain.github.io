@@ -916,7 +916,7 @@ function openMissionDetail(missionKey) {
                     const images = stepDiv.querySelectorAll('.clickable-image');
                     images.forEach((img, index) => {
                         img.addEventListener('click', () => {
-                            openImageModal(step.images[index]);
+                            openImageModal(step.images, index);
                         });
                     });
                 }, 0);
@@ -1890,7 +1890,36 @@ function hideUnwantedElements() {
 }
 
 // Fonctions pour la modal d'images
-function openImageModal(imageData) {
+const imageModalState = {
+    images: [],
+    index: 0
+};
+
+function updateImageModal() {
+    const modalImage = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    const prevBtn = document.querySelector('.image-modal-prev');
+    const nextBtn = document.querySelector('.image-modal-next');
+
+    const currentImage = imageModalState.images[imageModalState.index];
+    if (!currentImage) {
+        return;
+    }
+
+    modalImage.src = currentImage.src;
+    modalImage.alt = currentImage.alt;
+    modalCaption.textContent = currentImage.caption;
+
+    const hasMultiple = imageModalState.images.length > 1;
+    if (prevBtn && nextBtn) {
+        prevBtn.disabled = !hasMultiple;
+        nextBtn.disabled = !hasMultiple;
+        prevBtn.setAttribute('aria-hidden', (!hasMultiple).toString());
+        nextBtn.setAttribute('aria-hidden', (!hasMultiple).toString());
+    }
+}
+
+function openImageModal(images, startIndex = 0) {
     // Créer la modal si elle n'existe pas
     let modal = document.getElementById('image-modal');
     if (!modal) {
@@ -1899,6 +1928,12 @@ function openImageModal(imageData) {
         modal.className = 'image-modal-overlay';
         modal.innerHTML = `
             <div class="image-modal-content">
+                <button class="image-modal-nav image-modal-prev" aria-label="Image précédente">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="image-modal-nav image-modal-next" aria-label="Image suivante">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
                 <button class="image-modal-close">&times;</button>
                 <img id="modal-image" src="" alt="">
                 <p id="modal-caption"></p>
@@ -1910,6 +1945,29 @@ function openImageModal(imageData) {
         const closeBtn = modal.querySelector('.image-modal-close');
         closeBtn.addEventListener('click', closeImageModal);
         
+        const prevBtn = modal.querySelector('.image-modal-prev');
+        const nextBtn = modal.querySelector('.image-modal-next');
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (imageModalState.images.length < 2) {
+                    return;
+                }
+                imageModalState.index = (imageModalState.index - 1 + imageModalState.images.length) % imageModalState.images.length;
+                updateImageModal();
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (imageModalState.images.length < 2) {
+                    return;
+                }
+                imageModalState.index = (imageModalState.index + 1) % imageModalState.images.length;
+                updateImageModal();
+            });
+        }
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeImageModal();
@@ -1919,17 +1977,24 @@ function openImageModal(imageData) {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.style.display === 'flex') {
                 closeImageModal();
+                return;
+            }
+            if (modal.style.display === 'flex' && imageModalState.images.length > 1) {
+                if (e.key === 'ArrowLeft') {
+                    imageModalState.index = (imageModalState.index - 1 + imageModalState.images.length) % imageModalState.images.length;
+                    updateImageModal();
+                }
+                if (e.key === 'ArrowRight') {
+                    imageModalState.index = (imageModalState.index + 1) % imageModalState.images.length;
+                    updateImageModal();
+                }
             }
         });
     }
-    
-    // Remplir la modal avec les données de l'image
-    const modalImage = document.getElementById('modal-image');
-    const modalCaption = document.getElementById('modal-caption');
-    
-    modalImage.src = imageData.src;
-    modalImage.alt = imageData.alt;
-    modalCaption.textContent = imageData.caption;
+
+    imageModalState.images = Array.isArray(images) ? images : [images];
+    imageModalState.index = Math.min(Math.max(startIndex, 0), imageModalState.images.length - 1);
+    updateImageModal();
     
     // Afficher la modal
     modal.style.display = 'flex';

@@ -2035,6 +2035,42 @@ html {
     align-items: center;
 }
 
+.image-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 25, 47, 0.7);
+    border: 1px solid var(--accent-bleu);
+    color: var(--texte-blanc);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.image-modal-prev {
+    left: -60px;
+}
+
+.image-modal-next {
+    right: -60px;
+}
+
+.image-modal-nav:hover {
+    background: rgba(100, 255, 218, 0.2);
+    color: var(--accent-bleu);
+}
+
+.image-modal-nav:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
 .image-modal-close {
     position: absolute;
     top: -40px;
@@ -2111,6 +2147,14 @@ html {
         font-size: 1rem;
         margin-top: 10px;
         padding: 0 10px;
+    }
+
+    .image-modal-prev {
+        left: 10px;
+    }
+
+    .image-modal-next {
+        right: 10px;
     }
 }
 
