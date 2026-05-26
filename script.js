@@ -219,7 +219,7 @@ const missionData = {
                 competenceKey: 'mode-projet',
                 images: [
                     {
-                        src: 'KIWI.img/Travailler%20en%20mode%20projet/Vue%20globale%20Trello.png',
+                        src: 'KIWI.img/Travailler%20en%20mode%20projet/Vue%20globale%20Trello%20Mission%20Kiwi.png',
                         alt: 'Vue globale Trello',
                         caption: 'Vue globale Trello pour le suivi de la mission Kiwi'
                     },
