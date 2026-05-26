@@ -31,7 +31,7 @@ particlesJS("particles-js", {
             straight: false,
             out_mode: "out"
         }
-    },
+                        src: 'KIWI.img/Travailler%20en%20mode%20projet/Vue%20globale%20Trello%20Mission%20Kiwi.png',
     interactivity: {
         detect_on: "canvas",
         events: {
